@@ -1,0 +1,7 @@
+---
+import { navigation, profile } from '../data/site';
+const { active = '' } = Astro.props;
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="wordmark" href="/" aria-label={`${profile.name}, home`} aria-current={active === '' ? 'page' : undefined}>J<span>.</span></a><nav aria-label="Main navigation"><ul>{navigation.map((item) => <li><a class:list={[{ active: active === item.href }]} aria-current={active === item.href ? 'page' : undefined} href={item.href}>{item.label}</a></li>)}</ul></nav><a class="header-contact" href="/contact/">Let’s talk <span>↗</span></a><button class="menu-toggle" aria-expanded="false" aria-label="Open navigation" aria-controls="mobile-nav"><span></span><span></span></button></header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><ul>{navigation.map((item) => <li><a aria-current={active === item.href ? 'page' : undefined} href={item.href}>{item.label}<span>↗</span></a></li>)}<li><a aria-current={active === '/contact/' ? 'page' : undefined} href="/contact/">Contact <span>↗</span></a></li></ul></nav>

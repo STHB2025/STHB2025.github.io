@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import ProjectArtwork from '../components/ProjectArtwork.astro';
+import { experience } from '../data/site';
+---
+<BaseLayout title="Hospitality — Jackson" description="More than 16 years in hospitality, guest relations and operations." active="/hospitality/">
+  <section class="page-hero hospitality-hero"><div class="page-hero-copy"><span class="eyebrow">HOSPITALITY · THE OPERATIONAL FOUNDATION</span><h1>Service is a<br/><em>way of thinking.</em></h1><p>More than 16 years across hotels, luxury hospitality, restaurants, bars, cafés, concierge, guest relations and operations.</p></div><div class="hospitality-art"><ProjectArtwork kind="dazzle" /></div></section>
+  <section class="hospitality-statement"><span>WHAT THE WORK TAUGHT ME</span><p>Notice the detail.<br/>Stay calm under pressure.<br/><em>Make the experience work.</em></p><a href="/work/senior-tech-hub/" class="text-link">See how that carries forward <i>↗</i></a></section>
+  <section class="section experience-section"><div class="section-heading"><div><span class="eyebrow">EXPERIENCE · 2007—2026</span><h2>Built on the<br/><em>real work.</em></h2></div><p>Guest experience, operational discipline and practical problem-solving across service environments.</p></div><div class="timeline">{experience.map((job, i) => <article class="timeline-item"><span class="timeline-number">{String(i + 1).padStart(2, '0')}</span><div><h3>{job.role}</h3><span class="timeline-company">{job.company}</span><p>{job.detail}</p></div><time>{job.dates}</time></article>)}</div></section>
+</BaseLayout>

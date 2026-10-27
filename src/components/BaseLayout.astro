@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import '../styles/art-label.css';
+import '../styles/accessibility.css';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import { profile } from '../data/site';
+const { title = 'Jackson — Business Development · Technology · Hospitality', description = profile.headline, active = '', socialImage = '/images/social/og-default.png' } = Astro.props;
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || Astro.site?.toString();
+const canonicalUrl = siteUrl ? new URL(Astro.url.pathname, siteUrl).toString() : undefined;
+const socialImageUrl = siteUrl ? new URL(socialImage, siteUrl).toString() : undefined;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1eb" />
+    <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" /><meta property="og:site_name" content="Jackson Portfolio" /><meta property="og:title" content={title} /><meta property="og:description" content={description} />{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}{socialImageUrl && <><meta property="og:image" content={socialImageUrl} /><meta property="og:image:type" content="image/png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Jackson — Business Development, Technology and Hospitality" /></>}
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />{socialImageUrl && <><meta name="twitter:image" content={socialImageUrl} /><meta name="twitter:image:alt" content="Jackson — Business Development, Technology and Hospitality" /></>}
+    <title>{title}</title>
+  </head>
+  <body><SiteHeader active={active} /><main id="main"><slot /></main><SiteFooter />
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const mobile = document.querySelector<HTMLElement>('#mobile-nav');
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+        if (mobile) mobile.hidden = !open;
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+          if (mobile) mobile.hidden = true;
+          toggle.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../components/BaseLayout.astro';
+import ProjectArtwork from '../../components/ProjectArtwork.astro';
+import projects from '../../data/projects.json';
+export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
+const { project } = Astro.props;
+---
+<BaseLayout title={`${project.title} — Case study | Jackson`} description={project.summary} active="/work/">
+  <article class="case-study">
+    <header class="case-hero">
+      <div class="case-topline"><a href="/work/">← All work</a><span>CASE STUDY · {project.category.toUpperCase()}</span></div>
+      <div class="case-heading">
+        <div><span class="status">{project.status}</span><h1>{project.title}</h1><p>{project.summary}</p></div>
+        <div class="case-meta">
+          <span>ROLE</span><b>{project.role}</b>
+          {project.period && <><span>PERIOD</span><b>{project.period}</b></>}
+          {project.location && <><span>LOCATION</span><b>{project.location}</b></>}
+        </div>
+      </div>
+      <div class="case-art"><ProjectArtwork kind={project.visual} /><span class="case-art-caption">ORIGINAL EDITORIAL ARTWORK · PROJECT MEDIA TO BE ADDED WHEN APPROVED</span></div>
+    </header>
+    <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}<a href="#work">Work & capabilities</a><a href="#evidence">Evidence</a></aside><div class="case-main">
+      {project.challenge && <section id="context" class="case-section"><span class="eyebrow">01 / CONTEXT</span><h2>The situation</h2><p>{project.challenge}</p></section>}
+      {project.approach && <section id="approach" class="case-section"><span class="eyebrow">02 / APPROACH</span><h2>How I approach it</h2><p>{project.approach}</p></section>}
+      <section id="work" class="case-section"><span class="eyebrow">03 / WORK & CAPABILITIES</span><h2>In practice</h2>{project.deliverables.length > 0 && <ul class="deliverable-list">{project.deliverables.map((item, i) => <li><span>0{i + 1}</span>{item}</li>)}</ul>}{project.capabilities.length > 0 && <div class="capability-row">{project.capabilities.map((item) => <span>{item}</span>)}</div>}</section>
+      <section id="evidence" class="case-section"><span class="eyebrow">04 / EVIDENCE</span><h2>What you can explore</h2><ul class="evidence-list">{project.evidence.map((item) => <li>{item.href ? <a href={item.href} target="_blank" rel="noreferrer">{item.label}<span>↗</span></a> : <span>{item.label}<b class="verify-tag">VERIFY</b></span>}</li>)}</ul>{project.verify?.map((note) => <p class="verify-note"><b>VERIFY</b> {note}</p>)}{project.nextOpportunity && <p class="next-note"><b>NEXT OPPORTUNITY</b>{project.nextOpportunity}</p>}</section>
+      {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noreferrer">Visit the live project <span>↗</span></a>}
+    </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
+  </article>
+</BaseLayout>

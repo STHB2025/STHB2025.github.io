@@ -1,0 +1,10 @@
+---
+import ProjectArtwork from './ProjectArtwork.astro';
+const { project, index = 1 } = Astro.props;
+---
+<article class="project-card">
+  <a class="project-card-link" href={`/work/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
+    <div class="project-card-art"><ProjectArtwork kind={project.visual} compact /><span class="card-index">0{index}</span></div>
+    <div class="project-card-copy"><div class="card-kicker"><span>{project.category}</span><span class="status">{project.status}</span></div><h3>{project.title}</h3><p>{project.summary}</p><span class="text-link">Explore case study <i>↗</i></span></div>
+  </a>
+</article>

@@ -1,0 +1,4 @@
+---
+import { profile } from '../data/site';
+---
+<footer class="site-footer"><div class="footer-top"><div><span class="eyebrow">A GOOD PLACE TO START</span><h2>Let’s make<br/>something useful.</h2></div><a class="footer-email" href={`mailto:${profile.email}`}>{profile.email}<span>↗</span></a></div><div class="footer-bottom"><a class="footer-wordmark" href="/">J<span>.</span></a><span>Business Development · Technology · Hospitality</span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><span>© {new Date().getFullYear()} Jackson</span></div></footer>

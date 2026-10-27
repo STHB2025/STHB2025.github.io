@@ -1,0 +1,33 @@
+---
+const { kind = 'hub', compact = false } = Astro.props;
+const cls = `art art--${kind}${compact ? ' art--compact' : ''}`;
+---
+<div class={cls} aria-hidden="true">
+  {kind === 'hub' && <>
+    <div class="art-hub-orbit orbit-one"></div><div class="art-hub-orbit orbit-two"></div>
+    <div class="art-hub-card"><span class="art-eyebrow">SENIOR TECH HUB · LEARN WITH CONFIDENCE</span><span class="art-hub-title">Technology,<br/>at your pace.</span><span class="art-button">A little help goes a long way <i>↗</i></span></div>
+    <span class="art-index">01 / DIGITAL CONFIDENCE</span>
+  </>}
+  {kind === 'tips' && <>
+    <div class="art-tips-paper"><span class="art-eyebrow">TECH TIPS AFRICA · FIELD NOTE 04</span><span class="art-tips-number">04</span><span class="art-tips-title">Pause.<br/>Check.<br/>Then tap.</span><span class="art-tips-foot">A calmer way to stay safe online.</span></div>
+    <div class="art-tips-sticker">SMALL<br/>STEPS.<br/><b>MORE<br/>CONFIDENCE.</b></div>
+  </>}
+  {kind === 'dazzle' && <>
+    <div class="art-dazzle-sun"></div><div class="art-dazzle-frame"><span>CARE, MADE<br/>PRACTICAL.</span><i>HOME · FAMILY · SUPPORT</i></div>
+    <div class="art-dazzle-ribbon">DAZZLE HOME SERVICES</div>
+  </>}
+  {kind === 'wall' && <>
+    <div class="art-gallery-wall"><div class="frame frame-a"><span></span></div><div class="frame frame-b"><span></span></div><div class="frame frame-c"><span></span></div><div class="gallery-line"></div></div>
+    <span class="art-wall-label">MAKE SPACE<br/>FOR MEANING.</span><span class="art-wall-caption">THE WALL FITTER · CUSTOM FRAMING / PRINT / INSTALL</span>
+  </>}
+  {kind === 'arno' && <>
+    <div class="art-arno-field"><span class="arno-ring ring-a"></span><span class="arno-ring ring-b"></span><span class="arno-dot"></span><span class="art-arno-word">ARNO<br/><i>DEEP</i></span><span class="art-arno-sub">STRATEGY · BRAND · GROWTH</span></div>
+  </>}
+  {kind === 'trade' && <>
+    <div class="art-trade-map"><span class="map-dot dot-sa"></span><span class="map-dot dot-wa"></span><span class="map-route"></span><span class="map-node node-a">SOUTH<br/>AFRICA</span><span class="map-node node-b">WEST<br/>AFRICA</span><span class="map-center">TRUST<br/>BUILDS<br/>TRADE</span></div>
+  </>}
+  {kind === 'tech' && <>
+    <div class="art-tech-panel"><span class="art-eyebrow">TECHNOLOGY · IN PRACTICE</span><span class="tech-big">Human<br/>by design.</span><div class="tech-pills"><b>AI</b><b>APIs</b><b>FINTECH</b><b>INCLUSION</b></div><span class="tech-foot">USEFUL FIRST. UNDERSTANDABLE ALWAYS.</span></div>
+    <span class="tech-orb orb-x"></span><span class="tech-orb orb-y"></span>
+  </>}
+</div>
