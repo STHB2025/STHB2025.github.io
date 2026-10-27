@@ -16,6 +16,11 @@
     "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/senior-tech-hub-site/","kind":"live"},{"label":"Resource store","href":"https://payhip.com/SeniorTechHub","kind":"resource"}],
     "liveUrl":"https://sthb2025.github.io/senior-tech-hub-site/",
     "nextOpportunity":"Develop the resource library and community workshop model.",
+    "cover": {"src":"/images/projects/senior-tech-hub/digital-confidence.webp","alt":"Senior Tech Hub awareness graphic about practical technology support for seniors"},
+    "images": [
+      {"src":"/images/projects/senior-tech-hub/logo.webp","alt":"Senior Tech Hub logo","caption":"Senior Tech Hub visual identity."},
+      {"src":"/images/projects/senior-tech-hub/digital-confidence.webp","alt":"Senior Tech Hub awareness graphic showing a senior learning smartphone basics with a support worker","caption":"Awareness graphic about digital confidence, online safety and practical learning."}
+    ],
     "visual":"hub"
   },
   {
@@ -31,6 +36,13 @@
     "deliverables": ["Digital safety checklist concepts", "WhatsApp privacy guidance", "Newsletter and educational content", "Smartphone troubleshooting education"],
     "capabilities": ["Educational content", "Digital safety communication", "Newsletter development", "Human-centred technology education"],
     "evidence": [{"label":"Follow the LinkedIn newsletter","href":"https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270209091711467521","kind":"resource"}],
+    "cover": {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Tech Tips Africa educational graphic about recognizing scam messages"},
+    "images": [
+      {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo","caption":"Tech Tips Africa visual identity, connected to Senior Tech Hub."},
+      {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Educational graphic listing common scam messages such as prize, bank, parcel and account alerts","caption":"Digital safety content: pause and check messages that create urgency."},
+      {"src":"/images/projects/tech-tips-africa/before-you-click.webp","alt":"Four-step guide to pause, check the sender, open the official app and ask someone trusted before clicking","caption":"A practical four-step reminder to use before clicking a link."},
+      {"src":"/images/projects/tech-tips-africa/avoid-popups.webp","alt":"Tech Tips Africa graphic about unwanted phone ads and pop-ups, with older and younger people looking at a phone","caption":"Smartphone guidance graphic about unwanted advertisements and pop-ups."}
+    ],
     "visual":"tips"
   },
   {
@@ -47,6 +59,13 @@
     "capabilities": ["Business positioning", "Service architecture", "Copywriting", "Visual marketing", "WhatsApp-first marketing"],
     "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/dazzle-home-services-site/","kind":"live"},{"label":"Current project status","kind":"verify"}],
     "liveUrl":"https://sthb2025.github.io/dazzle-home-services-site/",
+    "cover": {"src":"/images/projects/dazzle-home-services/guest-ready.webp","alt":"Dazzle Home Services promotional artwork for a guest-ready room"},
+    "images": [
+      {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo for cleaning, nanny and domestic placement services","caption":"Dazzle Home Services visual identity supplied with the project materials."},
+      {"src":"/images/projects/dazzle-home-services/guest-ready.webp","alt":"Promotional artwork showing guest-ready rooms and cleaning service messages","caption":"Hospitality and cleaning service promotional artwork."},
+      {"src":"/images/projects/dazzle-home-services/cleaning-services.webp","alt":"Dazzle Home Services promotional collage presenting cleaning, guest preparation and home support messaging","caption":"Service promotion artwork for cleaning and guest preparation."},
+      {"src":"/images/projects/dazzle-home-services/family-support.webp","alt":"Dazzle Home Services community support flyer listing family, household and job application services","caption":"Community services flyer for household and family support."}
+    ],
     "visual":"dazzle",
     "verify":["Confirm Jackson’s specific role, dates and whether this project is currently active.","Use testimonials only when genuine and permissioned."]
   },
