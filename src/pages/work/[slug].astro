@@ -1,3 +1,4 @@
+Warning: fs was declared with const; use let for reassignable variables.
 ---
 import BaseLayout from '../../components/BaseLayout.astro';
 import ProjectArtwork from '../../components/ProjectArtwork.astro';
@@ -17,7 +18,7 @@ const { project } = Astro.props;
           {project.location && <><span>LOCATION</span><b>{project.location}</b></>}
         </div>
       </div>
-      <div class="case-art"><ProjectArtwork kind={project.visual} /><span class="case-art-caption">ORIGINAL EDITORIAL ARTWORK · PROJECT MEDIA TO BE ADDED WHEN APPROVED</span></div>
+      {project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /><span class="case-art-caption">ORIGINAL EDITORIAL ARTWORK</span></div>}
     </header>
     <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}<a href="#work">Work & capabilities</a><a href="#evidence">Evidence</a></aside><div class="case-main">
       {project.challenge && <section id="context" class="case-section"><span class="eyebrow">01 / CONTEXT</span><h2>The situation</h2><p>{project.challenge}</p></section>}
@@ -28,3 +29,11 @@ const { project } = Astro.props;
     </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
   </article>
 </BaseLayout>
+
+<style>
+  .case-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(0.75rem, 2vw, 1.5rem); margin-top: 2rem; }
+  .case-gallery figure { min-width: 0; margin: 0; overflow: hidden; background: #f1eee8; }
+  .case-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .case-gallery figcaption { padding: 0.8rem 1rem; color: #57534d; font-size: 0.82rem; line-height: 1.5; }
+  @media (max-width: 640px) { .case-gallery { grid-template-columns: 1fr; } }
+</style>

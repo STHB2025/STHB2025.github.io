@@ -1,3 +1,4 @@
+Warning: fs was declared with const; use let for reassignable variables.
 [
   {
     "slug": "senior-tech-hub",
@@ -65,6 +66,13 @@
     "deliverables": ["Custom framing", "High-definition printing", "Digital design and branding solutions", "Corporate and home décor", "Personalised artwork and installations"],
     "capabilities": ["Business development", "Client relationships", "Partnerships", "Service expansion", "Brand growth"],
     "evidence": [{"label":"Business photography and official assets","kind":"verify"}],
+    "cover": {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wall covering installed in a room"},
+    "images": [
+      {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wallpaper fitted across a feature wall","caption":"Custom wallpaper artwork and installed finish."},
+      {"src":"/images/projects/the-wall-fitter/hd-wallpaper-printing.jpg","alt":"Sculptural wall mural and interior styling example from The Wall Fitter","caption":"High-definition wallpaper printing and interior application."},
+      {"src":"/images/projects/the-wall-fitter/decorations-installations.jpg","alt":"The Wall Fitter service overview showing wall décor, framing, printing and installations","caption":"Service overview covering décor, framing, printing and installation."},
+      {"src":"/images/projects/the-wall-fitter/logo.png","alt":"The Wall Fitter zebra emblem and Custom Walls wordmark","caption":"The Wall Fitter brand mark."}
+    ],
     "visual":"wall",
     "verify":["Add official business links and approved project photography when supplied."]
   },
@@ -83,6 +91,13 @@
     "deliverables": ["Strategy and brand development", "Digital presence", "Business-facing promotional materials"],
     "capabilities": ["Business strategy", "Brand development", "Client relationships", "Partnership development", "Commercial storytelling"],
     "evidence": [{"label":"Official brand assets and project examples","kind":"verify"}],
+    "cover": {"src":"/images/projects/arno-deep/arno-deep-services.jpg","alt":"Arno Deep service overview and brand presentation"},
+    "images": [
+      {"src":"/images/projects/arno-deep/arno-deep-services.jpg","alt":"Arno Deep promotional overview for digital, print, identity, branding and promotions","caption":"Arno Deep service overview and brand presentation."},
+      {"src":"/images/projects/arno-deep/branding-example.jpg","alt":"Rose and Pearl beauty collateral displayed as a print branding example","caption":"Printed collateral example included in the supplied Arno Deep portfolio materials."},
+      {"src":"/images/projects/arno-deep/business-card-example.jpg","alt":"Alcony Carpentry business card design shown as a branding example","caption":"Business card example included in the supplied Arno Deep portfolio materials."},
+      {"src":"/images/projects/arno-deep/logo.jpg","alt":"Arno Deep wordmark and brand emblem on a light textured background","caption":"Arno Deep brand mark and service line."}
+    ],
     "visual":"arno",
     "verify":["Add approved brand assets and specific examples of completed work when supplied."]
   },
