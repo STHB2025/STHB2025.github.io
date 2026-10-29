@@ -35,7 +35,7 @@
     "approach": "Use simple English, short steps, practical examples and a calm, beginner-friendly tone across newsletter and educational content.",
     "deliverables": ["Digital safety checklist concepts", "WhatsApp privacy guidance", "Newsletter and educational content", "Smartphone troubleshooting education"],
     "capabilities": ["Educational content", "Digital safety communication", "Newsletter development", "Human-centred technology education"],
-    "evidence": [{"label":"Follow the LinkedIn newsletter","href":"https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7270209091711467521","kind":"resource"}],
+    "evidence": [],
     "cover": {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Tech Tips Africa educational graphic about recognizing scam messages"},
     "images": [
       {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo","caption":"Tech Tips Africa visual identity, connected to Senior Tech Hub."},
@@ -49,25 +49,18 @@
     "slug": "dazzle-home-services",
     "title": "Dazzle Home Services",
     "category": "Business Positioning & Digital Presence",
-    "status": "Active Project",
     "featured": true,
-    "role": "Business positioning, digital presence and marketing collateral",
     "summary": "Customer-facing service presentation and WhatsApp-first marketing for practical family and home support services.",
     "challenge": "Present a mix of home and family support services clearly across customer-facing materials and a digital presence.",
-    "approach": "Shape service messaging and promotional layouts around clear offers, family support and direct customer communication.",
+    "approach": "Project materials focus on clear service messages, family support and direct customer communication across digital and promotional formats.",
     "deliverables": ["Live website", "WhatsApp Status flyers", "Newborn and family support promotion", "Cleaning service promotion", "Customer-facing messaging"],
     "capabilities": ["Business positioning", "Service architecture", "Copywriting", "Visual marketing", "WhatsApp-first marketing"],
-    "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/dazzle-home-services-site/","kind":"live"},{"label":"Current project status","kind":"verify"}],
+    "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/dazzle-home-services-site/","kind":"live"}],
     "liveUrl":"https://sthb2025.github.io/dazzle-home-services-site/",
-    "cover": {"src":"/images/projects/dazzle-home-services/guest-ready.webp","alt":"Dazzle Home Services promotional artwork for a guest-ready room"},
     "images": [
-      {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo for cleaning, nanny and domestic placement services","caption":"Dazzle Home Services visual identity supplied with the project materials."},
-      {"src":"/images/projects/dazzle-home-services/guest-ready.webp","alt":"Promotional artwork showing guest-ready rooms and cleaning service messages","caption":"Hospitality and cleaning service promotional artwork."},
-      {"src":"/images/projects/dazzle-home-services/cleaning-services.webp","alt":"Dazzle Home Services promotional collage presenting cleaning, guest preparation and home support messaging","caption":"Service promotion artwork for cleaning and guest preparation."},
-      {"src":"/images/projects/dazzle-home-services/family-support.webp","alt":"Dazzle Home Services community support flyer listing family, household and job application services","caption":"Community services flyer for household and family support."}
+      {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo for cleaning, nanny and domestic placement services","caption":"Dazzle Home Services brand mark supplied with the project materials."}
     ],
-    "visual":"dazzle",
-    "verify":["Confirm Jackson’s specific role, dates and whether this project is currently active.","Use testimonials only when genuine and permissioned."]
+    "visual":"dazzle"
   },
   {
     "slug": "the-wall-fitter",
@@ -83,16 +76,15 @@
     "approach": "Jackson’s stated focus spans business development, client relationships, strategic partnerships, service expansion and commercial positioning.",
     "deliverables": ["Custom framing", "High-definition printing", "Digital design and branding solutions", "Corporate and home décor", "Personalised artwork and installations"],
     "capabilities": ["Business development", "Client relationships", "Partnerships", "Service expansion", "Brand growth"],
-    "evidence": [{"label":"Business photography and official assets","kind":"verify"}],
+    "evidence": [],
     "cover": {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wall covering installed in a room"},
     "images": [
-      {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wallpaper fitted across a feature wall","caption":"Custom wallpaper artwork and installed finish."},
-      {"src":"/images/projects/the-wall-fitter/hd-wallpaper-printing.jpg","alt":"Sculptural wall mural and interior styling example from The Wall Fitter","caption":"High-definition wallpaper printing and interior application."},
-      {"src":"/images/projects/the-wall-fitter/decorations-installations.jpg","alt":"The Wall Fitter service overview showing wall décor, framing, printing and installations","caption":"Service overview covering décor, framing, printing and installation."},
+      {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Promotional image showing a custom illustrated wallpaper installation associated with The Wall Fitter","caption":"Promotional artwork supplied with The Wall Fitter materials."},
+      {"src":"/images/projects/the-wall-fitter/hd-wallpaper-printing.jpg","alt":"The Wall Fitter promotional image for high-definition wallpaper printing","caption":"Supplied promotional artwork, shown as business collateral."},
+      {"src":"/images/projects/the-wall-fitter/decorations-installations.jpg","alt":"The Wall Fitter promotional overview for décor, framing, printing and installations","caption":"Supplied service artwork, not a record of an individual installation."},
       {"src":"/images/projects/the-wall-fitter/logo.png","alt":"The Wall Fitter zebra emblem and Custom Walls wordmark","caption":"The Wall Fitter brand mark."}
     ],
-    "visual":"wall",
-    "verify":["Add official business links and approved project photography when supplied."]
+    "visual":"wall"
   },
   {
     "slug": "arno-deep",
@@ -108,16 +100,11 @@
     "approach": "Jackson’s focus includes strategy, brand and digital development, client relationships, partnership development and commercial storytelling.",
     "deliverables": ["Strategy and brand development", "Digital presence", "Business-facing promotional materials"],
     "capabilities": ["Business strategy", "Brand development", "Client relationships", "Partnership development", "Commercial storytelling"],
-    "evidence": [{"label":"Official brand assets and project examples","kind":"verify"}],
-    "cover": {"src":"/images/projects/arno-deep/arno-deep-services.jpg","alt":"Arno Deep service overview and brand presentation"},
+    "evidence": [],
     "images": [
-      {"src":"/images/projects/arno-deep/arno-deep-services.jpg","alt":"Arno Deep promotional overview for digital, print, identity, branding and promotions","caption":"Arno Deep service overview and brand presentation."},
-      {"src":"/images/projects/arno-deep/branding-example.jpg","alt":"Rose and Pearl beauty collateral displayed as a print branding example","caption":"Printed collateral example included in the supplied Arno Deep portfolio materials."},
-      {"src":"/images/projects/arno-deep/business-card-example.jpg","alt":"Alcony Carpentry business card design shown as a branding example","caption":"Business card example included in the supplied Arno Deep portfolio materials."},
-      {"src":"/images/projects/arno-deep/logo.jpg","alt":"Arno Deep wordmark and brand emblem on a light textured background","caption":"Arno Deep brand mark and service line."}
+      {"src":"/images/projects/arno-deep/logo.jpg","alt":"Arno Deep wordmark and brand emblem on a light textured background","caption":"Arno Deep brand mark supplied with the project materials."}
     ],
-    "visual":"arno",
-    "verify":["Add approved brand assets and specific examples of completed work when supplied."]
+    "visual":"arno"
   },
   {
     "slug": "trade-procurement",
@@ -130,24 +117,26 @@
     "approach": "The proposed direction is low-capital, asset-light and partnership-driven, with a focus on supplier and buyer relationships.",
     "deliverables": [],
     "capabilities": ["Sourcing connections", "Export market development", "Procurement relationships"],
-    "evidence": [{"label":"Concept only; no operating evidence supplied","kind":"verify"}],
+    "evidence": [],
     "visual":"trade",
-    "verify":["Confirm public naming, stage, research and any approved partners before expanding this concept."]
+    "nextOpportunity":"Clarify the concept and potential partners before describing any operational activity."
   },
   {
-    "slug": "technology-fintech",
-    "title": "Technology, AI & Fintech",
-    "category": "Technology & Innovation",
-    "status": "Active",
+    "slug": "payguard-prototype",
+    "title": "PayGuard Prototype",
+    "category": "Prototype & Community Technology",
+    "status": "Prototype",
     "featured": false,
-    "role": "Technology and innovation practitioner; Investec Developer Community member",
-    "period": "Community member since January 2025",
-    "summary": "Practical exploration of AI, digital inclusion, APIs, fintech and programmable banking.",
-    "approach": "Technology is approached as a way to improve everyday life, make digital spaces safer and make learning more accessible.",
-    "deliverables": ["AI and prompt engineering course work through the University of South Africa (2025)", "Developer community meetups and build challenges"],
-    "capabilities": ["AI-assisted workflows", "Digital inclusion", "Technology education", "API and fintech exploration"],
-    "evidence": [{"label":"Course certificate details","kind":"verify"}],
-    "visual":"tech",
-    "verify":["Confirm certificate wording and public evidence for community activity."]
+    "role": "Community project listed under @STHB2025",
+    "summary": "A public prototype exploring a family review and approval flow for transactions. Its risk signals and approval steps are simulated.",
+    "challenge": "Explore how a family review step could fit into a transaction flow without presenting a demo as a live financial service.",
+    "approach": "A public Node/Express prototype models transactions in memory and demonstrates heuristic risk indicators and simulated approval states.",
+    "deliverables": ["Simulated transaction flow", "Heuristic risk indicators", "Family review and approval demonstration"],
+    "capabilities": ["Prototype framing", "Fintech concepts", "API and workflow exploration"],
+    "evidence": [
+      {"label": "PayGuard prototype repository", "href": "https://github.com/STHB2025/payguard-family-approval", "kind": "live"},
+      {"label": "Investec Developer Community project directory", "href": "https://github.com/Investec-Developer-Community/Community-Projects", "kind": "resource"}
+    ],
+    "visual": "tech"
   }
 ]

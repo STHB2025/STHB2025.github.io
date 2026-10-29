@@ -1,12 +1,12 @@
-export type ProjectStatus = 'Active' | 'Active Project' | 'Developing Concept';
+export type ProjectStatus = 'Active' | 'Developing Concept' | 'Prototype';
 
 export type Project = {
   slug: string;
   title: string;
   category: string;
-  status: ProjectStatus;
+  status?: ProjectStatus;
   featured: boolean;
-  role: string;
+  role?: string;
   period?: string;
   location?: string;
   summary: string;
@@ -14,9 +14,8 @@ export type Project = {
   approach?: string;
   deliverables: string[];
   capabilities: string[];
-  evidence: { label: string; href?: string; kind: 'live' | 'resource' | 'verify' }[];
+  evidence: { label: string; href: string; kind: 'live' | 'resource' }[];
   liveUrl?: string;
   nextOpportunity?: string;
   visual: 'hub' | 'tips' | 'dazzle' | 'wall' | 'arno' | 'trade' | 'tech';
-  verify?: string[];
 };

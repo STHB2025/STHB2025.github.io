@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+
+const resources = [
+  {
+    label: 'PROJECT SITE',
+    title: 'Senior Tech Hub',
+    description: 'Beginner-friendly digital support and learning resources for seniors, families and first-time technology users.',
+    href: 'https://sthb2025.github.io/senior-tech-hub-site/',
+    link: 'Visit the project site',
+  },
+  {
+    label: 'PROTOTYPE REPOSITORY',
+    title: 'PayGuard',
+    description: 'A public prototype with simulated transaction, risk-indicator and approval workflows. It is not a live banking service.',
+    href: 'https://github.com/STHB2025/payguard-family-approval',
+    link: 'Explore the prototype',
+  },
+  {
+    label: 'COMMUNITY DIRECTORY',
+    title: 'Investec Developer Community projects',
+    description: 'The community-curated directory lists Senior Tech Hub and PayGuard. Its listings are not official Investec products.',
+    href: 'https://github.com/Investec-Developer-Community/Community-Projects',
+    link: 'View the directory',
+  },
+  {
+    label: 'EVENT AGENDA',
+    title: 'DataConf 2025',
+    description: 'The official agenda lists Innocent Jackson and his talk on seniors, ethical AI and digital inclusion for 17 September 2025.',
+    href: 'https://www.dataconf.co.za/assets/files/Agenda%202025.pdf',
+    link: 'Read the official agenda',
+  },
+];
+---
+
+<BaseLayout title="Resources — Jackson" description="Public project links, a community directory and the DataConf 2025 agenda." active="/resources/">
+  <section class="page-hero resources-hero">
+    <div class="page-hero-copy">
+      <span class="eyebrow">RESOURCES · PUBLIC REFERENCES</span>
+      <h1>Useful places<br/><em>to start.</em></h1>
+      <p>A short collection of public project pages and source references connected to the work in this portfolio.</p>
+    </div>
+    <div class="resources-mark" aria-hidden="true"><span>OPEN</span><i>PROJECTS<br/>→ SOURCES<br/>→ CONTEXT</i></div>
+  </section>
+
+  <section class="section resources-section" aria-label="Public project and source links">
+    <div class="resources-grid">
+      {resources.map((resource, index) => (
+        <article class="resource-card">
+          <span class="eyebrow">0{index + 1} · {resource.label}</span>
+          <h2>{resource.title}</h2>
+          <p>{resource.description}</p>
+          <a class="text-link" href={resource.href} target="_blank" rel="noreferrer">{resource.link} <i>↗</i></a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .resources-hero { background: #e3e6dc; }
+  .resources-mark { width: 260px; height: 260px; border: 1px solid #aab6a7; border-radius: 50%; justify-self: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #345448; position: relative; transform: rotate(-7deg); }
+  .resources-mark::before { content: ''; position: absolute; inset: 15px; border: 1px solid #aab6a7; border-radius: 50%; }
+  .resources-mark span { font: 500 36px/1 var(--display); letter-spacing: -.06em; }
+  .resources-mark i { margin-top: 18px; font: 9px/1.5 var(--mono); font-style: normal; letter-spacing: .12em; text-align: center; }
+  .resources-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; border-top: 1px solid var(--line); }
+  .resource-card { padding: 30px 0 34px; border-bottom: 1px solid var(--line); }
+  .resource-card h2 { margin: 18px 0 10px; font: 500 clamp(24px, 2.7vw, 36px)/1.12 var(--display); letter-spacing: -.05em; }
+  .resource-card p { min-height: 3.5em; color: #5c6962; font-size: 13px; }
+  .resource-card .text-link { display: inline-block; margin-top: 12px; }
+  @media (max-width: 680px) { .resources-grid { grid-template-columns: 1fr; } .resource-card p { min-height: unset; } }
+</style>

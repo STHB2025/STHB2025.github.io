@@ -3,7 +3,7 @@ import projects from '../data/projects.json';
 
 const routes = [
   '/', '/about/', '/work/', '/hospitality/', '/technology/',
-  '/business-development/', '/thought-leadership/', '/contact/',
+  '/business-development/', '/thought-leadership/', '/resources/', '/contact/',
   ...projects.map((project) => `/work/${project.slug}/`),
 ];
 

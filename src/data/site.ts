@@ -5,7 +5,7 @@ export const profile = {
   headline: 'Building businesses, connecting technology, and creating practical impact.',
   positioning: 'Business Development • Technology • Hospitality • Entrepreneurship',
   bio: 'A Cape Town based business development and hospitality professional working at the intersection of entrepreneurship, technology, customer experience and community impact.',
-  email: 'hello.seniortechhub@gmail.com',
+  email: 'innoemailbox@gmail.com',
   linkedin: 'https://www.linkedin.com/in/innocent-jackson',
 };
 
@@ -15,7 +15,8 @@ export const navigation = [
   { label: 'Hospitality', href: '/hospitality/' },
   { label: 'Technology', href: '/technology/' },
   { label: 'Business development', href: '/business-development/' },
-  { label: 'Thinking', href: '/thought-leadership/' },
+  { label: 'Thought leadership', href: '/thought-leadership/' },
+  { label: 'Resources', href: '/resources/' },
 ];
 
 export const experience = [
@@ -34,7 +35,8 @@ export const experience = [
 export const education = [
   'Diploma in Hospitality Management — Alison, 2023',
   'Executive MBA – Business Administration & Management — Quantic School of Business and Technology, 2024',
-  'AI / Prompt Engineering Course Completion — University of South Africa, 2025',
+  'Canva — Graphic Design Essentials, 23 March 2025',
+  'Canva — AI in the Classroom, 19 March 2025',
   "International Computer Driver's Licence (ICDL)",
   'Certificate in Computer Skills — Appeltech Communication & Computer Training College',
   'Inbound & Outbound Call Centre Certificate — Appeltech Communication & Computer Training College',
