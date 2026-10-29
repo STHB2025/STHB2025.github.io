@@ -4,6 +4,6 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import projects from '../../data/projects.json';
 ---
 <BaseLayout title="Selected Work — Jackson" description="Selected business development, technology, education and community work." active="/work/">
-  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · THE PROOF IS IN THE PRACTICE</span><h1>Work that<br/><em>connects the dots.</em></h1><p>Active initiatives, business collaborations and concepts in development. Each project is labelled for its current status.</p></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
+  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · THE PROOF IS IN THE PRACTICE</span><h1>Work that<br/><em>connects the dots.</em></h1><p>A selection of community work, business initiatives, collaborations and a developing concept.</p></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
   <section class="section work-listing"><div class="work-filters"><span>ALL PROJECTS</span><span>07 ENTRIES</span><span class="filters-note">Status is part of the story.</span></div><div class="project-grid">{projects.map((project, i) => <ProjectCard project={project} index={i + 1} />)}</div></section>
 </BaseLayout>

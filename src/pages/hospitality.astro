@@ -1,10 +1,21 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
-import ProjectArtwork from '../components/ProjectArtwork.astro';
 import { experience } from '../data/site';
+const hospitalityExperience = experience.filter((job) => job.company !== 'KP Prop');
 ---
 <BaseLayout title="Hospitality — Jackson" description="More than 16 years in hospitality, guest relations and operations." active="/hospitality/">
-  <section class="page-hero hospitality-hero"><div class="page-hero-copy"><span class="eyebrow">HOSPITALITY · THE OPERATIONAL FOUNDATION</span><h1>Service is a<br/><em>way of thinking.</em></h1><p>More than 16 years across hotels, luxury hospitality, restaurants, bars, cafés, concierge, guest relations and operations.</p></div><div class="hospitality-art"><ProjectArtwork kind="dazzle" /></div></section>
+  <section class="page-hero hospitality-hero"><div class="page-hero-copy"><span class="eyebrow">HOSPITALITY · THE OPERATIONAL FOUNDATION</span><h1>Service is a<br/><em>way of thinking.</em></h1><p>More than 16 years across hotels, luxury hospitality, restaurants, bars, cafés, concierge, guest relations and operations.</p></div><div class="hospitality-art"><div class="hospitality-profile-mark" aria-hidden="true"><span>PEOPLE</span><i>DETAIL · SERVICE · CARE</i><span>EXPERIENCE</span></div><figure class="hospitality-profile"><img src="/images/jackson/portrait.webp" alt="Portrait of Jackson wearing a navy suit and glasses" loading="eager" decoding="async" /><figcaption>Innocent Jackson</figcaption></figure></div></section>
   <section class="hospitality-statement"><span>WHAT THE WORK TAUGHT ME</span><p>Notice the detail.<br/>Stay calm under pressure.<br/><em>Make the experience work.</em></p><a href="/work/senior-tech-hub/" class="text-link">See how that carries forward <i>↗</i></a></section>
-  <section class="section experience-section"><div class="section-heading"><div><span class="eyebrow">EXPERIENCE · 2007—2026</span><h2>Built on the<br/><em>real work.</em></h2></div><p>Guest experience, operational discipline and practical problem-solving across service environments.</p></div><div class="timeline">{experience.map((job, i) => <article class="timeline-item"><span class="timeline-number">{String(i + 1).padStart(2, '0')}</span><div><h3>{job.role}</h3><span class="timeline-company">{job.company}</span><p>{job.detail}</p></div><time>{job.dates}</time></article>)}</div></section>
+  <section class="section experience-section"><div class="section-heading"><div><span class="eyebrow">EXPERIENCE · 2007—2025</span><h2>Built on the<br/><em>real work.</em></h2></div><p>Guest experience, operational discipline and practical problem-solving across service environments.</p></div><div class="timeline">{hospitalityExperience.map((job, i) => <article class="timeline-item"><span class="timeline-number">{String(i + 1).padStart(2, '0')}</span><div><h3>{job.role}</h3><span class="timeline-company">{job.company}</span><p>{job.detail}</p></div><time>{job.dates}</time></article>)}</div></section>
 </BaseLayout>
+
+<style>
+  .hospitality-art { display: flex; align-items: center; justify-content: flex-end; min-width: 0; }
+  .hospitality-profile-mark { position: absolute; inset: 9% 3% 10% 6%; border: 1px solid #c7c8bd; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #627068; transform: rotate(-9deg); }
+  .hospitality-profile-mark span { font: 500 clamp(14px, 1.7vw, 22px) var(--display); letter-spacing: .16em; }
+  .hospitality-profile-mark i { font: 8px var(--mono); font-style: normal; letter-spacing: .1em; }
+  .hospitality-profile { position: relative; z-index: 1; width: clamp(118px, 15vw, 178px); height: 250px; margin: 0 7% 0 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+  .hospitality-profile img { display: block; width: 100%; height: 218px; object-fit: contain; object-position: center bottom; }
+  .hospitality-profile figcaption { align-self: flex-end; padding: 5px 9px; background: var(--paper); color: var(--ink); font: 8px var(--mono); letter-spacing: .06em; }
+  @media (max-width: 760px) { .hospitality-profile-mark { inset: 3% 4% 8% 4%; } .hospitality-profile { margin-right: 8%; } }
+</style>

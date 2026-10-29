@@ -4,11 +4,20 @@ const { project, index = 1 } = Astro.props;
 ---
 <article class="project-card">
   <a class="project-card-link" href={`/work/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
-    <div class="project-card-art">{project.cover ? <img class="project-card-photo" src={project.cover.src} alt={project.cover.alt} loading="lazy" decoding="async" /> : <ProjectArtwork kind={project.visual} compact />}<span class="card-index">0{index}</span></div>
+    <div class="project-card-art">
+      {project.cover ? <img class="project-card-photo" src={project.cover.src} alt={project.cover.alt} loading="lazy" decoding="async" /> : project.brandLogo ? <div class="project-card-brand-panel"><img src={project.brandLogo.src} alt={project.brandLogo.alt} loading="lazy" decoding="async" /></div> : <ProjectArtwork kind={project.visual} compact />}
+      {project.cover && project.brandLogo && <span class="project-card-brand"><img src={project.brandLogo.src} alt={project.brandLogo.alt} loading="lazy" decoding="async" /></span>}
+      <span class="card-index">0{index}</span>
+    </div>
     <div class="project-card-copy"><div class="card-kicker"><span>{project.category}</span>{project.status && <span class="status">{project.status}</span>}</div><h3>{project.title}</h3><p>{project.summary}</p><span class="text-link">Explore case study <i>↗</i></span></div>
   </a>
 </article>
 
 <style>
   .project-card-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .project-card-brand { position: absolute; z-index: 2; right: 18px; bottom: 18px; width: clamp(88px, 12vw, 142px); height: clamp(70px, 9vw, 108px); padding: 10px; display: grid; place-items: center; background: rgba(255,255,255,.94); box-shadow: 0 8px 28px rgba(24,42,40,.12); }
+  .project-card-brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .project-card-brand-panel { position: absolute; inset: 0; display: grid; place-items: center; padding: clamp(34px, 8vw, 100px); background: radial-gradient(ellipse at 50% 48%, #fff 0, #f6f4ef 55%, #e9e5dd 100%); }
+  .project-card-brand-panel img { display: block; width: min(68%, 360px); height: 72%; object-fit: contain; }
+  @media (max-width: 760px) { .project-card-brand { width: 112px; height: 84px; right: 12px; bottom: 12px; } }
 </style>

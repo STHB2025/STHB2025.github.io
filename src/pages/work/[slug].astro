@@ -4,6 +4,7 @@ import ProjectArtwork from '../../components/ProjectArtwork.astro';
 import projects from '../../data/projects.json';
 export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
 const { project } = Astro.props;
+const logoOnly = project.images?.length === 1 && project.brandLogo?.src === project.images[0].src;
 ---
 <BaseLayout title={`${project.title} — Case study | Jackson`} description={project.summary} active="/work/">
   <article class="case-study">
@@ -17,14 +18,14 @@ const { project } = Astro.props;
           {project.location && <><span>LOCATION</span><b>{project.location}</b></>}
         </div>}
       </div>
-      {project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /><span class="case-art-caption">ORIGINAL EDITORIAL ARTWORK</span></div>}
+      {logoOnly ? <div class="brand-case-hero"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
     </header>
     <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}<a href="#work">Work & capabilities</a>{(project.evidence.length > 0 || project.nextOpportunity) && <a href="#evidence">Evidence</a>}</aside><div class="case-main">
       {project.challenge && <section id="context" class="case-section"><span class="eyebrow">01 / CONTEXT</span><h2>The situation</h2><p>{project.challenge}</p></section>}
       {project.approach && <section id="approach" class="case-section"><span class="eyebrow">02 / APPROACH</span><h2>How I approach it</h2><p>{project.approach}</p></section>}
       <section id="work" class="case-section"><span class="eyebrow">03 / WORK & CAPABILITIES</span><h2>In practice</h2>{project.deliverables.length > 0 && <ul class="deliverable-list">{project.deliverables.map((item, i) => <li><span>0{i + 1}</span>{item}</li>)}</ul>}{project.capabilities.length > 0 && <div class="capability-row">{project.capabilities.map((item) => <span>{item}</span>)}</div>}</section>
-      {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">04 / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
-      {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noreferrer">Visit the live project <span>↗</span></a>}
+      {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">04 / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
+      {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit the live project <span>↗</span></a>}
     </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
   </article>
 </BaseLayout>
@@ -35,5 +36,8 @@ const { project } = Astro.props;
   .case-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .case-gallery figcaption { padding: 0.8rem 1rem; color: #57534d; font-size: 0.82rem; line-height: 1.5; }
   .case-heading-single { grid-template-columns: 1fr; }
-  @media (max-width: 640px) { .case-gallery { grid-template-columns: 1fr; } }
+  .brand-case-hero { min-height: clamp(270px, 40vw, 440px); margin-top: 1.5rem; padding: clamp(2rem, 8vw, 6rem); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; background: radial-gradient(ellipse at 50% 48%, #fff 0, #f6f4ef 55%, #e9e5dd 100%); }
+  .brand-case-hero img { display: block; width: min(70%, 380px); height: clamp(130px, 21vw, 230px); object-fit: contain; }
+  .brand-case-hero span { color: #59665f; font: 9px var(--mono); letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+  @media (max-width: 640px) { .case-gallery { grid-template-columns: 1fr; } .brand-case-hero { min-height: 250px; } .brand-case-hero img { width: 80%; height: 150px; } }
 </style>

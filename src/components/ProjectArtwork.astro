@@ -30,4 +30,9 @@ const cls = `art art--${kind}${compact ? ' art--compact' : ''}`;
     <div class="art-tech-panel"><span class="art-eyebrow">TECHNOLOGY · IN PRACTICE</span><span class="tech-big">Human<br/>by design.</span><div class="tech-pills"><b>AI</b><b>APIs</b><b>FINTECH</b><b>INCLUSION</b></div><span class="tech-foot">USEFUL FIRST. UNDERSTANDABLE ALWAYS.</span></div>
     <span class="tech-orb orb-x"></span><span class="tech-orb orb-y"></span>
   </>}
+  {kind === 'payguard' && <div class="payguard-flow">
+    <span class="payguard-flow-kicker">PAYGUARD · PROTOTYPE</span>
+    <div class="payguard-flow-steps"><span><b>01</b>Transaction</span><i aria-hidden="true">→</i><span><b>02</b>Risk check</span><i aria-hidden="true">→</i><span><b>03</b>Family review</span></div>
+    <p>Simulated transaction and approval workflow</p>
+  </div>}
 </div>

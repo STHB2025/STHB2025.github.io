@@ -8,7 +8,7 @@ const featured = projects.filter((p) => p.featured).slice(0, 5);
 ---
 <BaseLayout title="Jackson — Building businesses, connecting technology" description={profile.headline}>
   <section class="hero home-hero">
-    <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> JACKSON · CAPE TOWN, SOUTH AFRICA</p><h1>Building businesses,<br/><em>connecting technology,</em><br/>and creating practical impact.</h1><p class="hero-position">Business Development <b>•</b> Technology <b>•</b> Hospitality <b>•</b> Entrepreneurship</p><div class="hero-actions"><a class="button button-dark" href="/work/">Explore the work <span>↘</span></a><a class="quiet-link" href="/about/">A little about me <span>↗</span></a></div></div>
+    <div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> JACKSON · CAPE TOWN, SOUTH AFRICA</p><h1>Building businesses,<br/><em>connecting technology,</em><br/>and creating<br/>practical impact.</h1><p class="hero-position">Business Development <b>•</b> Technology <b>•</b> Hospitality <b>•</b> Entrepreneurship</p><div class="hero-actions"><a class="button button-dark" href="/work/">Explore the work <span>↘</span></a><a class="quiet-link" href="/about/">A little about me <span>↗</span></a></div><div class="hero-projects" aria-label="Featured projects"><span>SELECTED PROJECTS</span><div>{featured.filter((project) => project.brandLogo).map((project) => <a href={`/work/${project.slug}/`} aria-label={`Explore ${project.title}`}><img src={project.brandLogo.src} alt={project.brandLogo.alt} /></a>)}</div></div></div>
     <div class="hero-art-wrap"><ProjectArtwork kind="hub" /><span class="hero-art-caption">PATIENT TECHNOLOGY SUPPORT,<br/>BUILT AROUND PEOPLE.</span><span class="hero-orbit-note">01 — 03<br/>A HUMAN-CENTRED PRACTICE</span></div>
     <div class="hero-bottom"><span>SCROLL TO DISCOVER</span><span class="scroll-rule"></span><span>01 / 06</span></div>
   </section>
@@ -18,3 +18,13 @@ const featured = projects.filter((p) => p.featured).slice(0, 5);
   <section class="belief-band"><div class="belief-number">01—04</div><blockquote>“Technology should improve everyday life — and people should feel confident using it.”</blockquote><span>THE PRINCIPLE BEHIND THE PRACTICE</span></section>
   <section class="home-close"><span class="eyebrow">GOOD WORK STARTS WITH A CONVERSATION</span><h2>Have a practical<br/><em>challenge in mind?</em></h2><a class="button button-dark" href="/contact/">Get in touch <span>↗</span></a></section>
 </BaseLayout>
+
+<style>
+  .home-hero h1 { font-size: clamp(44px, 5.1vw, 72px); }
+  .hero-projects { display: flex; align-items: center; gap: 13px; margin-top: 18px; }
+  .hero-projects>span { font: 8px var(--mono); letter-spacing: .1em; color: #68716b; white-space: nowrap; }
+  .hero-projects>div { display: flex; gap: 7px; }
+  .hero-projects a { width: 45px; height: 38px; display: grid; place-items: center; padding: 4px; background: #fff; border: 1px solid rgba(24,42,40,.08); }
+  .hero-projects img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+  @media (max-width: 760px) { .home-hero h1 { font-size: clamp(38px, 10.5vw, 50px); } .hero-projects { gap: 9px; margin-top: 14px; } .hero-projects>div { gap: 6px; } .hero-projects a { width: 42px; height: 36px; } }
+</style>

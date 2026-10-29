@@ -17,6 +17,7 @@
     "liveUrl":"https://sthb2025.github.io/senior-tech-hub-site/",
     "nextOpportunity":"Develop the resource library and community workshop model.",
     "cover": {"src":"/images/projects/senior-tech-hub/digital-confidence.webp","alt":"Senior Tech Hub awareness graphic about practical technology support for seniors"},
+    "brandLogo": {"src":"/images/projects/senior-tech-hub/logo.webp","alt":"Senior Tech Hub logo"},
     "images": [
       {"src":"/images/projects/senior-tech-hub/logo.webp","alt":"Senior Tech Hub logo","caption":"Senior Tech Hub visual identity."},
       {"src":"/images/projects/senior-tech-hub/digital-confidence.webp","alt":"Senior Tech Hub awareness graphic showing a senior learning smartphone basics with a support worker","caption":"Awareness graphic about digital confidence, online safety and practical learning."}
@@ -37,6 +38,7 @@
     "capabilities": ["Educational content", "Digital safety communication", "Newsletter development", "Human-centred technology education"],
     "evidence": [],
     "cover": {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Tech Tips Africa educational graphic about recognizing scam messages"},
+    "brandLogo": {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo"},
     "images": [
       {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo","caption":"Tech Tips Africa visual identity, connected to Senior Tech Hub."},
       {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Educational graphic listing common scam messages such as prize, bank, parcel and account alerts","caption":"Digital safety content: pause and check messages that create urgency."},
@@ -50,6 +52,7 @@
     "title": "Dazzle Home Services",
     "category": "Business Positioning & Digital Presence",
     "featured": true,
+    "brandLogo": {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo"},
     "summary": "Customer-facing service presentation and WhatsApp-first marketing for practical family and home support services.",
     "challenge": "Present a mix of home and family support services clearly across customer-facing materials and a digital presence.",
     "approach": "Project materials focus on clear service messages, family support and direct customer communication across digital and promotional formats.",
@@ -78,6 +81,7 @@
     "capabilities": ["Business development", "Client relationships", "Partnerships", "Service expansion", "Brand growth"],
     "evidence": [],
     "cover": {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wall covering installed in a room"},
+    "brandLogo": {"src":"/images/projects/the-wall-fitter/logo.png","alt":"The Wall Fitter logo"},
     "images": [
       {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Promotional image showing a custom illustrated wallpaper installation associated with The Wall Fitter","caption":"Promotional artwork supplied with The Wall Fitter materials."},
       {"src":"/images/projects/the-wall-fitter/hd-wallpaper-printing.jpg","alt":"The Wall Fitter promotional image for high-definition wallpaper printing","caption":"Supplied promotional artwork, shown as business collateral."},
@@ -96,6 +100,7 @@
     "period": "February 2025 – Present",
     "location": "South Africa",
     "summary": "A business focus positioned around strategy, brand development, digital presence and sustainable growth.",
+    "brandLogo": {"src":"/images/projects/arno-deep/logo.jpg","alt":"Arno Deep logo"},
     "challenge": "Turn creative ideas into clear, business-facing opportunities with room to grow.",
     "approach": "Jackson’s focus includes strategy, brand and digital development, client relationships, partnership development and commercial storytelling.",
     "deliverables": ["Strategy and brand development", "Digital presence", "Business-facing promotional materials"],
@@ -137,6 +142,6 @@
       {"label": "PayGuard prototype repository", "href": "https://github.com/STHB2025/payguard-family-approval", "kind": "live"},
       {"label": "Investec Developer Community project directory", "href": "https://github.com/Investec-Developer-Community/Community-Projects", "kind": "resource"}
     ],
-    "visual": "tech"
+    "visual": "payguard"
   }
 ]

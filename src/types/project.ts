@@ -17,5 +17,6 @@ export type Project = {
   evidence: { label: string; href: string; kind: 'live' | 'resource' }[];
   liveUrl?: string;
   nextOpportunity?: string;
-  visual: 'hub' | 'tips' | 'dazzle' | 'wall' | 'arno' | 'trade' | 'tech';
+  brandLogo?: { src: string; alt: string };
+  visual: 'hub' | 'tips' | 'dazzle' | 'wall' | 'arno' | 'trade' | 'tech' | 'payguard';
 };
