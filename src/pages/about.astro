@@ -11,10 +11,10 @@ import { profile, education } from '../data/site';
 </BaseLayout>
 
 <style>
-  .about-portrait { display: grid; place-items: end center; isolation: isolate; overflow: hidden; background: radial-gradient(ellipse at 50% 78%, rgba(206, 216, 204, .38), rgba(244, 241, 235, 0) 67%); }
+  .about-portrait { display: grid; place-items: end center; isolation: isolate; overflow: hidden; border: 1px solid rgba(125, 211, 238, .34); border-radius: 50% 50% 20px 20px; background: radial-gradient(ellipse at 50% 75%, rgba(14, 90, 167, .74), rgba(11, 37, 69, .96) 58%, #07182e 100%); box-shadow: 0 24px 60px rgba(7, 24, 46, .2); }
   .about-portrait::before, .about-portrait::after { content: ''; position: absolute; z-index: -1; left: 50%; top: 48%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); }
-  .about-portrait::before { width: min(76%, 292px); background: radial-gradient(circle at 38% 30%, #f5f2ec 0, #e4e8df 67%, #d6ded4 100%); box-shadow: 0 24px 55px rgba(24, 42, 40, .08); }
-  .about-portrait::after { width: min(84%, 324px); border: 1px solid rgba(76, 99, 84, .24); }
-  .about-portrait img { display: block; width: min(91%, 348px); height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 12px 16px rgba(24, 42, 40, .13)); }
+  .about-portrait::before { width: min(76%, 292px); background: radial-gradient(circle at 50% 45%, rgba(28, 111, 180, .42), rgba(11, 37, 69, .16) 70%); box-shadow: 0 24px 55px rgba(0, 0, 0, .18); }
+  .about-portrait::after { width: min(84%, 324px); border: 1px solid rgba(125, 211, 238, .42); }
+  .about-portrait img { display: block; width: min(91%, 348px); height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .3)); }
   @media (max-width: 760px) { .about-portrait::before { width: min(72vw, 258px); } .about-portrait::after { width: min(80vw, 288px); } .about-portrait img { width: min(88vw, 320px); } }
 </style>
