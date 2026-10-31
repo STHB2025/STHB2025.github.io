@@ -8,6 +8,14 @@
       "src": "/images/projects/senior-tech-hub/digital-confidence.webp",
       "alt": "Senior Tech Hub awareness graphic about practical technology support for seniors"
     },
+    "brandMark": {
+      "src": "/images/projects/senior-tech-hub/logo.webp",
+      "alt": "Senior Tech Hub logo"
+    },
+    "founderPortrait": {
+      "src": "/images/jackson/portrait.webp",
+      "alt": "Jackson, founder of Senior Tech Hub"
+    },
     "sample": { "label": "Visit the project website", "href": "https://sthb2025.github.io/senior-tech-hub-site/" }
   },
   {
