@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../components/BaseLayout.astro';
+import DesignWorkCard from '../components/DesignWorkCard.astro';
+import designWork from '../data/design-work.json';
+import projects from '../data/projects.json';
+const selectedWork = designWork.map((item) => ({ item, project: projects.find((project) => project.slug === item.projectSlug)! }));
+---
+<BaseLayout title="Design & Digital Work — Jackson" description="Selected website, educational campaign, service identity and brand storytelling work by Jackson." active="/work/">
+  <section class="page-hero design-hero">
+    <div class="page-hero-copy">
+      <span class="eyebrow">DESIGN & DIGITAL · SELECTED PRACTICE</span>
+      <h1>Useful ideas,<br/><em>made visible.</em></h1>
+      <p>Web presence, educational graphics and service storytelling across community technology, home services and creative businesses.</p>
+      <a class="text-link" href="/work/">Back to all projects <i>↗</i></a>
+    </div>
+    <div class="design-hero-index" aria-label="Design work themes">
+      <span>01 <b>LEARN</b></span><i></i><span>02 <b>CONNECT</b></span><i></i><span>03 <b>GROW</b></span>
+    </div>
+  </section>
+  <section class="section design-listing" aria-label="Selected design and digital work">
+    <div class="section-heading"><div><span class="eyebrow">SELECTED SAMPLES</span><h2>Work with a<br/><em>clear purpose.</em></h2></div><p>Each sample links to its project context. Canva pieces open in Canva; live project sites open in a new tab.</p></div>
+    <div class="design-card-list">{selectedWork.map(({ item, project }) => <DesignWorkCard item={item} project={project} />)}</div>
+  </section>
+</BaseLayout>
+
+<style>
+  .design-hero { background: radial-gradient(ellipse at 78% 50%, #e5e9df 0, #f4f1eb 53%, #f4f1eb 100%); }
+  .design-hero-index { width: min(72%, 340px); aspect-ratio: 1; justify-self: center; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 21%; border: 1px solid #b8c4b4; border-radius: 50%; position: relative; color: #637168; transform: rotate(-8deg); }
+  .design-hero-index::before, .design-hero-index::after { content: ''; position: absolute; inset: 14px; border: 1px solid #d0d5c9; border-radius: 50%; }
+  .design-hero-index::after { inset: 30px; }
+  .design-hero-index span { position: relative; z-index: 1; font: 9px var(--mono); letter-spacing: .12em; }
+  .design-hero-index b { padding-left: 12px; color: var(--ink); font-weight: 500; }
+  .design-hero-index i { position: relative; z-index: 1; height: 22px; width: 1px; margin: 2px 0 2px 12px; background: #a9b8a9; }
+  .design-listing .section-heading > p { max-width: 330px; color: #59665f; font-size: 13px; }
+  @media (max-width: 760px) { .design-hero-index { width: 225px; margin: 30px auto 0; } .design-listing .section-heading { display: block; } .design-listing .section-heading > p { margin-top: 18px; } }
+</style>

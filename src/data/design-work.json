@@ -1,0 +1,46 @@
+[
+  {
+    "projectSlug": "senior-tech-hub",
+    "discipline": "Website & learning materials",
+    "title": "A practical digital home for community learning",
+    "description": "A community technology website and beginner-friendly resources that make everyday digital support easier to find.",
+    "preview": {
+      "src": "/images/projects/senior-tech-hub/digital-confidence.webp",
+      "alt": "Senior Tech Hub awareness graphic about practical technology support for seniors"
+    },
+    "sample": { "label": "Visit the project website", "href": "https://sthb2025.github.io/senior-tech-hub-site/" }
+  },
+  {
+    "projectSlug": "tech-tips-africa",
+    "discipline": "Educational campaign design",
+    "title": "A calm, step-by-step smartphone series",
+    "description": "A visual explainer series about unwanted phone ads and pop-ups, written in plain language for everyday readers.",
+    "preview": {
+      "src": "/images/projects/tech-tips-africa/avoid-popups.webp",
+      "alt": "Tech Tips Africa educational graphic explaining unwanted phone ads and pop-ups"
+    },
+    "sample": { "label": "Open the Canva series", "href": "https://www.canva.com/d/L0zT6qCusrEhMv_" }
+  },
+  {
+    "projectSlug": "dazzle-home-services",
+    "discipline": "Service identity & digital presence",
+    "title": "A clearer way to present home services",
+    "description": "Brand presentation and a digital home for a service offer spanning cleaning, nanny placement and domestic support.",
+    "preview": {
+      "src": "/images/projects/dazzle-home-services/logo.webp",
+      "alt": "Dazzle Home Services logo for cleaning, nanny and domestic placement services"
+    },
+    "sample": { "label": "Visit the project website", "href": "https://sthb2025.github.io/dazzle-home-services-site/" }
+  },
+  {
+    "projectSlug": "the-wall-fitter",
+    "discipline": "Brand & spatial storytelling",
+    "title": "Taking a brand vision into a physical space",
+    "description": "Promotional and concept material connecting identity, interior finishes and visual presentation for The Wall Fitter.",
+    "preview": {
+      "src": "/images/projects/the-wall-fitter/decorations-installations.jpg",
+      "alt": "The Wall Fitter promotional overview for décor, framing, printing and installations"
+    },
+    "sample": { "label": "Open the Canva project carousel", "href": "https://www.canva.com/d/eLSylT5Vs8OPqAW" }
+  }
+]
