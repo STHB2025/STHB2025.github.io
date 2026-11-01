@@ -1,8 +1,9 @@
 ---
 const { item, project } = Astro.props;
+const externalLinks = item.links ?? [item.sample];
 ---
 <article class="design-card">
-  <a class="design-card-image" href={`/work/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
+  <a class:list={['design-card-image', item.imageFit === 'contain' && 'design-card-image-contained']} href={`/work/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
     <img src={item.preview.src} alt={item.preview.alt} loading="lazy" decoding="async" />
     {item.brandMark && <span class="design-card-brand"><img src={item.brandMark.src} alt={item.brandMark.alt} loading="lazy" decoding="async" /></span>}
     {item.founderPortrait && <span class="design-card-founder"><img src={item.founderPortrait.src} alt={item.founderPortrait.alt} loading="lazy" decoding="async" /></span>}
@@ -13,7 +14,7 @@ const { item, project } = Astro.props;
     <h2>{item.title}</h2>
     <p class="design-card-description">{item.description}</p>
     <div class="design-card-links">
-      <a class="text-link" href={item.sample.href} target="_blank" rel="noopener noreferrer">{item.sample.label} <i>↗</i></a>
+      {externalLinks.filter(Boolean).map((link) => <a class="text-link" href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <i>↗</i></a>)}
       <a class="design-case-link" href={`/work/${project.slug}/`}>Project context <span>↗</span></a>
     </div>
   </div>
@@ -25,17 +26,19 @@ const { item, project } = Astro.props;
   .design-card:nth-child(even) .design-card-image { order: 2; }
   .design-card-image { position: relative; display: block; min-height: 290px; aspect-ratio: 1.32; overflow: hidden; background: #e8e5dd; }
   .design-card-image img { display: block; width: 100%; height: 100%; min-height: 290px; object-fit: cover; transition: transform .5s ease; }
+  .design-card-image-contained { display: grid; place-items: center; padding: clamp(18px, 4vw, 42px); background: radial-gradient(ellipse at 50% 48%, #f8f7f3, #e4e0d6); }
+  .design-card-image-contained > img:first-child { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
   .design-card-image .design-card-brand { position: absolute; top: 16px; left: 16px; width: clamp(76px, 11vw, 112px); aspect-ratio: 1; display: grid; place-items: center; padding: 5px; overflow: hidden; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: #07152b; box-shadow: 0 8px 24px rgba(4, 13, 29, .24); }
   .design-card-image .design-card-brand img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; border-radius: 50%; }
   .design-card-image .design-card-founder { position: absolute; right: clamp(16px, 3vw, 34px); bottom: 20px; width: clamp(98px, 15vw, 150px); aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; border: 3px solid rgba(125, 211, 238, .9); border-radius: 50%; background: #0b2545; box-shadow: 0 10px 28px rgba(7, 24, 46, .42); }
   .design-card-image .design-card-founder img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 20%; border-radius: 50%; }
-  .design-card-image:hover img { transform: scale(1.025); }
+  .design-card-image:hover > img:first-child { transform: scale(1.025); }
   .design-card-index { position: absolute; left: 14px; bottom: 14px; padding: 8px 10px; background: rgba(244, 241, 235, .94); color: var(--ink); font: 9px var(--mono); letter-spacing: .08em; }
   .design-card-copy { max-width: 480px; }
   .design-card-kicker { margin: 0 0 16px; color: #68736b; text-transform: uppercase; font: 9px var(--mono); letter-spacing: .1em; }
   .design-card-copy h2 { margin: 0 0 14px; font: 500 clamp(26px, 3.3vw, 42px)/1.12 var(--display); letter-spacing: -.055em; }
   .design-card-description { max-width: 430px; color: #59665f; font-size: 14px; }
-  .design-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 23px; }
+  .design-card-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 23px; }
   .design-case-link { color: #59665f; font-size: 12px; font-weight: 650; }
   .design-case-link span { padding-left: 6px; color: var(--orange); }
   .design-card a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }

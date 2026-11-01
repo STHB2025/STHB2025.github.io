@@ -46,9 +46,34 @@
     "title": "Taking a brand vision into a physical space",
     "description": "Promotional and concept material connecting identity, interior finishes and visual presentation for The Wall Fitter.",
     "preview": {
-      "src": "/images/projects/the-wall-fitter/decorations-installations.jpg",
-      "alt": "The Wall Fitter promotional overview for décor, framing, printing and installations"
+      "src": "/images/projects/the-wall-fitter/custom-wallpaper.jpg",
+      "alt": "Custom illustrated wall covering featured in The Wall Fitter portfolio"
     },
-    "sample": { "label": "Open the Canva project carousel", "href": "https://www.canva.com/d/eLSylT5Vs8OPqAW" }
+    "brandMark": { "src": "/images/projects/the-wall-fitter/logo.png", "alt": "The Wall Fitter logo" },
+    "imageFit": "contain",
+    "links": [
+      { "label": "Visit The Wall Fitter", "href": "https://www.thewallfitter.co.za" },
+      { "label": "The Wall Fitter on LinkedIn", "href": "https://za.linkedin.com/company/the-wall-fitter" },
+      { "label": "Open the Canva project carousel", "href": "https://www.canva.com/d/eLSylT5Vs8OPqAW" }
+    ]
+  },
+  {
+    "projectSlug": "arno-deep",
+    "discipline": "Brand identity & business-facing design",
+    "title": "Creative work that connects brand and business",
+    "description": "A supplied Arno Deep service board presenting design, print, corporate identity, promotions and branding.",
+    "preview": {
+      "src": "/images/projects/arno-deep/design-services.webp",
+      "alt": "Arno Deep design services board featuring design, print, corporate identity, promotions and branding"
+    },
+    "brandMark": {
+      "src": "/images/projects/arno-deep/logo.jpg",
+      "alt": "Arno Deep logo"
+    },
+    "imageFit": "contain",
+    "links": [
+      { "label": "Visit Arno Deep", "href": "https://www.arnodeep.com" },
+      { "label": "Arno Deep on LinkedIn", "href": "https://www.linkedin.com/company/arno-deep-pty-ltd" }
+    ]
   }
 ]
