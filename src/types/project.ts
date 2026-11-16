@@ -3,6 +3,7 @@ export type ProjectStatus = 'Active' | 'Developing Concept' | 'Prototype';
 export type Project = {
   slug: string;
   title: string;
+  portfolioCategory: 'website-development' | 'technology-education' | 'business-development' | 'prototypes-experiments';
   category: string;
   projectType?: string;
   status?: ProjectStatus;
@@ -13,6 +14,8 @@ export type Project = {
   summary: string;
   challenge?: string;
   approach?: string;
+  websiteFeatures?: string[];
+  visualNote?: string;
   deliverables: string[];
   capabilities: string[];
   evidence: { label: string; href: string; kind: 'live' | 'resource' }[];

@@ -8,13 +8,14 @@ const { project } = Astro.props;
 const logoOnly = project.images?.length === 1 && project.brandLogo?.src === project.images[0].src;
 const contactProject = ['arno-deep', 'the-wall-fitter'].includes(project.slug);
 const projectContact = `mailto:${profile.email}?subject=${encodeURIComponent(`${project.title} enquiry`)}`;
+const hasWebsiteFeatures = Boolean(project.websiteFeatures?.length);
 ---
 <BaseLayout title={`${project.title} — Case study | Jackson`} description={project.summary} active="/work/">
   <article class="case-study">
     <header class="case-hero">
       <div class="case-topline"><a href="/work/">← All work</a><span>CASE STUDY · {project.category.toUpperCase()}</span></div>
       <div class="case-heading" class:list={{ 'case-heading-single': !(project.role || project.period || project.location) }}>
-        <div>{project.status && <span class="status">{project.status}</span>}<h1>{project.title}</h1><p>{project.summary}</p></div>
+        <div>{project.status && <span class="status">{project.status}</span>}<h1>{project.title}</h1>{hasWebsiteFeatures && <span class="eyebrow case-background-label">PROJECT BACKGROUND</span>}<p>{project.summary}</p></div>
         {(project.role || project.period || project.location) && <div class="case-meta">
           {project.projectType && <><span>PROJECT TYPE</span><b>{project.projectType}</b></>}
           {project.role && <><span>MY ROLE</span><b>{project.role}</b></>}
@@ -23,12 +24,14 @@ const projectContact = `mailto:${profile.email}?subject=${encodeURIComponent(`${
         </div>}
       </div>
       {logoOnly && project.slug === 'dazzle-home-services' ? <figure class="dazzle-preview"><div class="case-art"><ProjectArtwork kind={project.visual} /><span class="dazzle-preview-logo"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /></span></div><figcaption>Illustrative project preview using the supplied brand mark and service themes. This is not a screenshot of the live website.</figcaption></figure> : logoOnly ? <div class="brand-case-hero"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
+      {project.visualNote && <p class="case-visual-note">{project.visualNote}</p>}
     </header>
-    <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}<a href="#work">Work & capabilities</a>{(project.evidence.length > 0 || project.nextOpportunity) && <a href="#evidence">Evidence</a>}</aside><div class="case-main">
+    <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}{hasWebsiteFeatures && <a href="#features">Website features</a>}<a href="#work">Work & capabilities</a>{(project.evidence.length > 0 || project.nextOpportunity) && <a href="#evidence">Evidence</a>}</aside><div class="case-main">
       {project.challenge && <section id="context" class="case-section"><span class="eyebrow">01 / CONTEXT</span><h2>The situation</h2><p>{project.challenge}</p></section>}
       {project.approach && <section id="approach" class="case-section"><span class="eyebrow">02 / APPROACH</span><h2>How I approach it</h2><p>{project.approach}</p></section>}
-      <section id="work" class="case-section"><span class="eyebrow">03 / WORK & CAPABILITIES</span><h2>In practice</h2>{project.deliverables.length > 0 && <ul class="deliverable-list">{project.deliverables.map((item, i) => <li><span>0{i + 1}</span>{item}</li>)}</ul>}{project.capabilities.length > 0 && <div class="capability-row">{project.capabilities.map((item) => <span>{item}</span>)}</div>}</section>
-      {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">04 / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
+      {hasWebsiteFeatures && <section id="features" class="case-section"><span class="eyebrow">03 / WEBSITE FEATURES</span><h2>What visitors can explore</h2><ul class="deliverable-list">{project.websiteFeatures.map((feature, i) => <li><span>0{i + 1}</span>{feature}</li>)}</ul></section>}
+      <section id="work" class="case-section"><span class="eyebrow">{hasWebsiteFeatures ? '04' : '03'} / WORK & CAPABILITIES</span><h2>In practice</h2>{project.deliverables.length > 0 && <ul class="deliverable-list">{project.deliverables.map((item, i) => <li><span>0{i + 1}</span>{item}</li>)}</ul>}{project.capabilities.length > 0 && <div class="capability-row">{project.capabilities.map((item) => <span>{item}</span>)}</div>}</section>
+      {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">{hasWebsiteFeatures ? '05' : '04'} / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
       {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit the live project <span>↗</span></a>}
       {contactProject && <a class="button button-dark case-cta" href={projectContact}>Contact Me <span>↗</span></a>}
     </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
@@ -40,7 +43,9 @@ const projectContact = `mailto:${profile.email}?subject=${encodeURIComponent(`${
   .case-gallery figure { min-width: 0; margin: 0; overflow: hidden; background: #f1eee8; }
   .case-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .case-gallery figcaption { padding: 0.8rem 1rem; color: #57534d; font-size: 0.82rem; line-height: 1.5; }
+  .case-visual-note { max-width: 700px; margin: .8rem 0 0 auto; color: #59665f; text-align: right; font-size: .8rem; line-height: 1.5; }
   .case-heading-single { grid-template-columns: 1fr; }
+  .case-background-label { margin-top: 12px; }
   .brand-case-hero { min-height: clamp(270px, 40vw, 440px); margin-top: 1.5rem; padding: clamp(2rem, 8vw, 6rem); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; background: radial-gradient(ellipse at 50% 48%, #fff 0, #f6f4ef 55%, #e9e5dd 100%); }
   .brand-case-hero img { display: block; width: min(70%, 380px); height: clamp(130px, 21vw, 230px); object-fit: contain; }
   .brand-case-hero span { color: #59665f; font: 9px var(--mono); letter-spacing: .13em; text-align: center; text-transform: uppercase; }
@@ -50,5 +55,5 @@ const projectContact = `mailto:${profile.email}?subject=${encodeURIComponent(`${
   .dazzle-preview-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .dazzle-preview > figcaption { max-width: 690px; margin: .75rem 0 0 auto; color: #59665f; text-align: right; font-size: .8rem; line-height: 1.5; }
   @media (max-width: 640px) { .case-gallery { grid-template-columns: 1fr; } .brand-case-hero { min-height: 250px; } .brand-case-hero img { width: 80%; height: 150px; } }
-  @media (max-width: 640px) { .dazzle-preview > figcaption { text-align: left; } .dazzle-preview-logo { top: 12px; right: 12px; width: 96px; height: 76px; } }
+  @media (max-width: 640px) { .dazzle-preview > figcaption, .case-visual-note { text-align: left; margin-left: 0; } .dazzle-preview-logo { top: 12px; right: 12px; width: 96px; height: 76px; } }
 </style>

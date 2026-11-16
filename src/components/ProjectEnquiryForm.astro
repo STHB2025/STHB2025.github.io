@@ -1,0 +1,106 @@
+---
+const { email, whatsapp } = Astro.props;
+const whatsappHref = `https://wa.me/${whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Jackson, I would like to discuss a website project.')}`;
+---
+<section class="project-enquiry" id="project-enquiry" aria-labelledby="project-enquiry-title">
+  <div class="project-enquiry-heading">
+    <span class="eyebrow">WEBSITE PROJECT ENQUIRY</span>
+    <h2 id="project-enquiry-title">Tell me what you<br/><em>want to build.</em></h2>
+    <p>Complete the details and prepare an email draft. Nothing is sent until you review and send it from your email app.</p>
+  </div>
+  <form class="project-enquiry-form" data-contact-email={email} hidden>
+    <div class="project-form-grid">
+      <label for="enquiry-name">Your name <span aria-hidden="true">*</span>
+        <input id="enquiry-name" name="name" autocomplete="name" required />
+      </label>
+      <label for="enquiry-business">Business name <span class="form-optional">(optional)</span>
+        <input id="enquiry-business" name="business" autocomplete="organization" />
+      </label>
+      <label for="enquiry-email">Email address <span aria-hidden="true">*</span>
+        <input id="enquiry-email" name="email" type="email" autocomplete="email" required />
+      </label>
+      <label for="enquiry-whatsapp">WhatsApp number <span class="form-optional">(optional)</span>
+        <input id="enquiry-whatsapp" name="whatsapp" type="tel" autocomplete="tel" />
+      </label>
+      <label for="enquiry-type">Type of website <span aria-hidden="true">*</span>
+        <select id="enquiry-type" name="websiteType" required>
+          <option value="">Choose an option</option>
+          <option>Small business website</option>
+          <option>Service business website</option>
+          <option>Business landing page</option>
+          <option>Website redesign</option>
+          <option>Not sure yet</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label for="enquiry-budget">Estimated budget <span class="form-optional">(optional)</span>
+        <input id="enquiry-budget" name="budget" placeholder="Enter a range or ‘Not sure yet’" />
+      </label>
+      <label class="project-form-wide" for="enquiry-description">Project description <span aria-hidden="true">*</span>
+        <textarea id="enquiry-description" name="description" rows="5" required></textarea>
+      </label>
+    </div>
+    <button class="button button-dark" type="submit">Prepare Email Enquiry <span aria-hidden="true">↗</span></button>
+    <p class="project-enquiry-status" role="status" aria-live="polite">This website does not send or store form submissions. Submitting prepares an email draft for you to review.</p>
+  </form>
+  <div class="project-enquiry-fallback"><span>If your email app does not open, contact me directly:</span><a href={`mailto:${email}`}>{email}</a><a href={whatsappHref} target="_blank" rel="noopener noreferrer">Continue in WhatsApp <span aria-hidden="true">↗</span></a></div>
+</section>
+
+<script>
+  const enquiryForm = document.querySelector<HTMLFormElement>('.project-enquiry-form');
+  if (enquiryForm) enquiryForm.hidden = false;
+  enquiryForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!enquiryForm.reportValidity()) return;
+
+    const fields = new FormData(enquiryForm);
+    const read = (key: string) => String(fields.get(key) ?? '').trim() || 'Not provided';
+    const contactEmail = enquiryForm.dataset.contactEmail;
+    if (!contactEmail) return;
+
+    const name = read('name');
+    const business = read('business');
+    const subject = `Website project enquiry — ${business !== 'Not provided' ? business : name}`;
+    const body = [
+      'Hi Jackson,',
+      '',
+      `Name: ${name}`,
+      `Business name: ${business}`,
+      `Email: ${read('email')}`,
+      `WhatsApp number: ${read('whatsapp')}`,
+      `Type of website: ${read('websiteType')}`,
+      `Estimated budget: ${read('budget')}`,
+      '',
+      'Project description:',
+      read('description'),
+    ].join('\n');
+    const status = document.querySelector<HTMLElement>('.project-enquiry-status');
+    if (status) status.textContent = 'Your email app should open with a prepared draft. Review the details and send it to complete your enquiry. If it does not open, use the direct email or WhatsApp links below.';
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+
+<style>
+  .project-enquiry { display: grid; grid-template-columns: .75fr 1.25fr; gap: 30px clamp(30px, 6vw, 82px); padding: clamp(30px, 5vw, 64px); background: #ebe7df; }
+  .project-enquiry-heading { grid-column: 1; }
+  .project-enquiry-heading h2 { margin: 18px 0; font: 500 clamp(33px, 4vw, 52px)/1.08 var(--display); letter-spacing: -.065em; }
+  .project-enquiry-heading h2 em { font-family: Georgia, serif; font-weight: 400; }
+  .project-enquiry-heading > p { max-width: 340px; color: #59665f; font-size: 13px; }
+  .project-enquiry-form { grid-column: 2; grid-row: 1 / span 2; }
+  .project-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 15px; }
+  .project-form-grid label { display: grid; gap: 7px; color: #36443e; font-size: 11px; font-weight: 650; }
+  .project-form-grid label > span[aria-hidden="true"] { color: #a04b31; }
+  .project-form-grid .form-optional { color: #68716b; font-size: 10px; font-weight: 400; }
+  .project-form-grid input, .project-form-grid select, .project-form-grid textarea { width: 100%; min-width: 0; border: 1px solid #c8c8bd; border-radius: 0; padding: 12px; background: #f8f6f1; color: #182a28; font: 13px var(--sans); }
+  .project-form-grid input, .project-form-grid select { min-height: 44px; }
+  .project-form-grid textarea { min-height: 130px; resize: vertical; }
+  .project-form-grid input:focus-visible, .project-form-grid select:focus-visible, .project-form-grid textarea:focus-visible { outline: 3px solid #d76b47; outline-offset: 2px; }
+  .project-form-wide { grid-column: 1 / -1; }
+  .project-enquiry-form > .button { margin-top: 20px; cursor: pointer; }
+  .project-enquiry-status { max-width: 560px; margin: 13px 0 0; color: #59665f; font-size: 11px; line-height: 1.6; }
+  .project-enquiry-fallback { grid-column: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; color: #59665f; font-size: 11px; }
+  .project-enquiry-fallback a { color: #182a28; text-decoration: underline; text-underline-offset: 3px; }
+  .project-enquiry-fallback a:last-child { font-weight: 700; }
+  @media (max-width: 760px) { .project-enquiry { grid-template-columns: 1fr; gap: 24px; padding: 26px 20px; } .project-enquiry-heading, .project-enquiry-form, .project-enquiry-fallback { grid-column: 1; grid-row: auto; } }
+  @media (max-width: 520px) { .project-form-grid { grid-template-columns: 1fr; } .project-form-wide { grid-column: 1; } }
+</style>

@@ -2,6 +2,7 @@
   {
     "slug": "senior-tech-hub",
     "title": "Senior Tech Hub",
+    "portfolioCategory": "website-development",
     "projectType": "Personal project",
     "category": "Technology & Community Impact",
     "status": "Active",
@@ -12,6 +13,8 @@
     "summary": "A founder-led initiative helping seniors, families and first-time technology users build confidence with everyday digital tools.",
     "challenge": "Everyday technology can feel difficult or risky when support is rushed, technical or intimidating. Senior Tech Hub is built around patient, practical learning that respects each person’s pace.",
     "approach": "Create a human-centred learning ecosystem: clear guidance, practical resources, small-group and one-to-one support, and community partnerships.",
+    "websiteFeatures": ["Guidance on smartphone basics, computer skills and online safety", "Small-group class and one-to-one support information", "Tech Tips Africa educational content", "Links to digital resources and the Payhip store"],
+    "visualNote": "The images shown are Senior Tech Hub brand and educational materials, not screenshots of the live website.",
     "deliverables": ["Digital safety resources", "Beginner-friendly learning materials", "Live website and resource store", "Workshop and Tech Bar concepts"],
     "capabilities": ["Digital inclusion", "Technology education", "Branding and marketing", "Community engagement", "Partnership development"],
     "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/senior-tech-hub-site/","kind":"live"},{"label":"Resource store","href":"https://payhip.com/SeniorTechHub","kind":"resource"}],
@@ -28,6 +31,7 @@
   {
     "slug": "tech-tips-africa",
     "title": "Tech Tips Africa",
+    "portfolioCategory": "technology-education",
     "projectType": "Education programme",
     "category": "Education & Thought Leadership",
     "status": "Active",
@@ -52,6 +56,7 @@
   {
     "slug": "dazzle-home-services",
     "title": "Dazzle Home Services",
+    "portfolioCategory": "website-development",
     "projectType": "Client business project",
     "role": "Website design and development",
     "category": "Business Positioning & Digital Presence",
@@ -60,6 +65,7 @@
     "summary": "Customer-facing service presentation and WhatsApp-first marketing for practical family and home support services.",
     "challenge": "Present a mix of home and family support services clearly across customer-facing materials and a digital presence.",
     "approach": "Project materials focus on clear service messages, family support and direct customer communication across digital and promotional formats.",
+    "websiteFeatures": ["Structured service information for home and family support", "Service cards for cleaning, care referrals, CV support and small-business setup", "WhatsApp enquiry links", "Gallery of service and marketing materials"],
     "deliverables": ["Live website", "WhatsApp Status flyers", "Newborn and family support promotion", "Cleaning service promotion", "Customer-facing messaging"],
     "capabilities": ["Business positioning", "Service architecture", "Copywriting", "Visual marketing", "WhatsApp-first marketing"],
     "evidence": [{"label":"Project website","href":"https://sthb2025.github.io/dazzle-home-services-site/","kind":"live"}],
@@ -72,6 +78,7 @@
   {
     "slug": "the-wall-fitter",
     "title": "The Wall Fitter",
+    "portfolioCategory": "business-development",
     "projectType": "Co-founded venture",
     "category": "Business Development & Brand Growth",
     "status": "Active",
@@ -98,6 +105,7 @@
   {
     "slug": "arno-deep",
     "title": "Arno Deep",
+    "portfolioCategory": "business-development",
     "projectType": "Co-founded venture",
     "category": "Strategy & Brand Growth",
     "status": "Active",
@@ -120,6 +128,7 @@
   {
     "slug": "trade-procurement",
     "title": "South Africa–West Africa Trade & Procurement",
+    "portfolioCategory": "business-development",
     "projectType": "Developing concept",
     "category": "Business Development",
     "status": "Developing Concept",
@@ -136,6 +145,7 @@
   {
     "slug": "payguard-prototype",
     "title": "PayGuard Prototype",
+    "portfolioCategory": "prototypes-experiments",
     "projectType": "Prototype",
     "category": "Prototype & Community Technology",
     "status": "Prototype",
