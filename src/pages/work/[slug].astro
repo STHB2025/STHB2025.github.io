@@ -3,6 +3,7 @@ import BaseLayout from '../../components/BaseLayout.astro';
 import ProjectArtwork from '../../components/ProjectArtwork.astro';
 import projects from '../../data/projects.json';
 import { profile } from '../../data/site';
+import { sitePath } from '../../utils/site-path';
 export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
 const { project } = Astro.props;
 const logoOnly = project.images?.length === 1 && project.brandLogo?.src === project.images[0].src;
@@ -13,7 +14,7 @@ const hasWebsiteFeatures = Boolean(project.websiteFeatures?.length);
 <BaseLayout title={`${project.title} — Case study | Jackson`} description={project.summary} active="/work/">
   <article class="case-study">
     <header class="case-hero">
-      <div class="case-topline"><a href="/work/">← All work</a><span>CASE STUDY · {project.category.toUpperCase()}</span></div>
+      <div class="case-topline"><a href={sitePath('/work/')}>← All work</a><span>CASE STUDY · {project.category.toUpperCase()}</span></div>
       <div class="case-heading" class:list={{ 'case-heading-single': !(project.role || project.period || project.location) }}>
         <div>{project.status && <span class="status">{project.status}</span>}<h1>{project.title}</h1>{hasWebsiteFeatures && <span class="eyebrow case-background-label">PROJECT BACKGROUND</span>}<p>{project.summary}</p></div>
         {(project.role || project.period || project.location) && <div class="case-meta">
@@ -23,7 +24,7 @@ const hasWebsiteFeatures = Boolean(project.websiteFeatures?.length);
           {project.location && <><span>LOCATION</span><b>{project.location}</b></>}
         </div>}
       </div>
-      {logoOnly && project.slug === 'dazzle-home-services' ? <figure class="dazzle-preview"><div class="case-art"><ProjectArtwork kind={project.visual} /><span class="dazzle-preview-logo"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /></span></div><figcaption>Illustrative project preview using the supplied brand mark and service themes. This is not a screenshot of the live website.</figcaption></figure> : logoOnly ? <div class="brand-case-hero"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
+      {logoOnly && project.slug === 'dazzle-home-services' ? <figure class="dazzle-preview"><div class="case-art"><ProjectArtwork kind={project.visual} /><span class="dazzle-preview-logo"><img src={sitePath(project.brandLogo.src)} alt={project.brandLogo.alt} /></span></div><figcaption>Illustrative project preview using the supplied brand mark and service themes. This is not a screenshot of the live website.</figcaption></figure> : logoOnly ? <div class="brand-case-hero"><img src={sitePath(project.brandLogo.src)} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={sitePath(image.src)} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
       {project.visualNote && <p class="case-visual-note">{project.visualNote}</p>}
     </header>
     <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}{hasWebsiteFeatures && <a href="#features">Website features</a>}<a href="#work">Work & capabilities</a>{(project.evidence.length > 0 || project.nextOpportunity) && <a href="#evidence">Evidence</a>}</aside><div class="case-main">
@@ -34,7 +35,7 @@ const hasWebsiteFeatures = Boolean(project.websiteFeatures?.length);
       {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">{hasWebsiteFeatures ? '05' : '04'} / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
       {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit the live project <span>↗</span></a>}
       {contactProject && <a class="button button-dark case-cta" href={projectContact}>Contact Me <span>↗</span></a>}
-    </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
+    </div></div><nav class="case-next"><a href={sitePath('/work/')}>Explore more work <span>↗</span></a><a href={sitePath('/contact/')}>Start a conversation <span>↗</span></a></nav>
   </article>
 </BaseLayout>
 

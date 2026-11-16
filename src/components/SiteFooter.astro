@@ -1,4 +1,5 @@
 ---
 import { profile } from '../data/site';
+import { sitePath } from '../utils/site-path';
 ---
-<footer class="site-footer"><div class="footer-top"><div><span class="eyebrow">A GOOD PLACE TO START</span><h2>Have an idea<br/>or opportunity?</h2></div><a class="footer-email" href={`mailto:${profile.email}?subject=${encodeURIComponent('Professional enquiry')}`}>Get in touch<span>↗</span></a></div><div class="footer-bottom"><a class="footer-wordmark" href="/">J<span>.</span></a><span>Business · Technology · Hospitality</span><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>© {new Date().getFullYear()} Jackson</span></div></footer>
+<footer class="site-footer"><div class="footer-top"><div><span class="eyebrow">A GOOD PLACE TO START</span><h2>Have an idea<br/>or opportunity?</h2></div><a class="footer-email" href={`mailto:${profile.email}?subject=${encodeURIComponent('Professional enquiry')}`}>Get in touch<span>↗</span></a></div><div class="footer-bottom"><a class="footer-wordmark" href={sitePath('/')}>J<span>.</span></a><span>Business · Technology · Hospitality</span><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>© {new Date().getFullYear()} Jackson</span></div></footer>

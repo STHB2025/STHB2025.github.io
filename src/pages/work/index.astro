@@ -2,6 +2,7 @@
 import BaseLayout from '../../components/BaseLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import projects from '../../data/projects.json';
+import { sitePath } from '../../utils/site-path';
 const categoryGroups = [
   { id: 'website-development', title: 'Website Development', description: 'Website work for a founder-led digital learning initiative and a client service business.' },
   { id: 'technology-education', title: 'Technology and Education', description: 'Digital learning and practical education work.' },
@@ -10,7 +11,7 @@ const categoryGroups = [
 ];
 ---
 <BaseLayout title="Selected Work — Jackson Portfolio" description="Explore website development, technology and education, business-development, and prototype projects by Jackson in Cape Town, South Africa." active="/work/">
-  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · WEB & BUSINESS PROJECTS</span><h1>Work that<br/><em>connects the dots.</em></h1><p>Browse seven projects by the kind of work they represent. The two website projects lead; other work shows the wider technology, education and business-development practice.</p><div class="work-hero-actions"><a class="button button-dark" href="#website-development">Explore website work <span>↓</span></a><a class="quiet-link" href="/design-and-digital/">See design samples <span>↗</span></a><a class="quiet-link" href="/contact/">Discuss an opportunity <span>↗</span></a></div></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
+  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · WEB & BUSINESS PROJECTS</span><h1>Work that<br/><em>connects the dots.</em></h1><p>Browse seven projects by the kind of work they represent. The two website projects lead; other work shows the wider technology, education and business-development practice.</p><div class="work-hero-actions"><a class="button button-dark" href="#website-development">Explore website work <span>↓</span></a><a class="quiet-link" href={sitePath('/design-and-digital/')}>See design samples <span>↗</span></a><a class="quiet-link" href={sitePath('/contact/')}>Discuss an opportunity <span>↗</span></a></div></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
   <section class="section work-listing" id="selected-work"><div class="work-filters"><span>PROJECT CATEGORIES</span><span>{projects.length} ENTRIES</span><span class="filters-note">Select a category to jump to its projects.</span></div><nav class="work-category-nav" aria-label="Project categories"><ul>{categoryGroups.map((group) => <li><a href={`#${group.id}`}>{group.title}<span aria-hidden="true">↘</span></a></li>)}</ul></nav>
     {categoryGroups.map((group) => {
       const groupProjects = projects.filter((project) => project.portfolioCategory === group.id);
