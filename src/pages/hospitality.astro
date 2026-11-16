@@ -14,12 +14,11 @@ const gigEnquiry = `mailto:${profile.email}?subject=${encodeURIComponent('Hospit
 
 <style>
   .hospitality-art { display: flex; align-items: center; justify-content: center; min-width: 0; }
-  .hospitality-profile-mark { position: absolute; inset: 12% 12%; border: 1px solid rgba(52, 84, 72, .18); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(52, 84, 72, .72); transform: rotate(-7deg); }
-  .hospitality-profile-mark span { font: 500 clamp(14px, 1.7vw, 22px) var(--display); letter-spacing: .16em; }
-  .hospitality-profile-mark i { font: 8px var(--mono); font-style: normal; letter-spacing: .1em; }
-  .hospitality-profile { position: relative; z-index: 1; width: clamp(118px, 15vw, 178px); height: 250px; margin: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; overflow: hidden; border: 1px solid rgba(52, 84, 72, .22); border-radius: 50% 50% 18px 18px; background: radial-gradient(ellipse at 50% 72%, rgba(215, 223, 205, .8), rgba(233, 230, 222, .94) 72%); box-shadow: 0 12px 28px rgba(24, 42, 40, .08); }
-  .hospitality-profile img { display: block; width: 100%; height: 218px; object-fit: contain; object-position: center bottom; }
-  .hospitality-profile figcaption { align-self: flex-end; padding: 5px 9px; background: var(--green); color: #fff; font: 8px var(--mono); letter-spacing: .06em; }
+  .hospitality-profile-mark { position: absolute; inset: auto; width: min(310px, 82%); aspect-ratio: 1; border: 1px solid rgba(52, 84, 72, .13); border-radius: 50%; background: radial-gradient(circle, rgba(223, 229, 217, .9), rgba(233, 230, 222, .45) 72%); }
+  .hospitality-profile-mark span, .hospitality-profile-mark i { display: none; }
+  .hospitality-profile { position: relative; z-index: 1; width: clamp(174px, 18vw, 230px); height: clamp(260px, 21vw, 300px); margin: 0; display: flex; align-items: center; justify-content: center; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .hospitality-profile img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; }
+  .hospitality-profile figcaption { position: absolute; right: -8px; bottom: 2px; padding: 5px 10px; border-radius: 999px; background: var(--green); color: #fff; font: 8px var(--mono); letter-spacing: .06em; }
   .hospitality-services { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(32px, 7vw, 96px); background: #f4f1eb; }
   .hospitality-services h2 { margin: 18px 0 20px; font: 500 clamp(34px, 4vw, 54px)/1.08 var(--display); letter-spacing: -.065em; }
   .hospitality-services h2 em { font-family: Georgia, serif; font-weight: 400; }
@@ -27,5 +26,5 @@ const gigEnquiry = `mailto:${profile.email}?subject=${encodeURIComponent('Hospit
   .hospitality-services .button { margin-top: 15px; }
   .hospitality-service-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
   .hospitality-service-list li { padding: 13px 0; border-bottom: 1px solid var(--line); color: #48534e; font-size: 15px; line-height: 1.55; }
-  @media (max-width: 760px) { .hospitality-profile-mark { inset: 12% 8%; } .hospitality-services { grid-template-columns: 1fr; gap: 30px; } }
+  @media (max-width: 760px) { .hospitality-profile-mark { width: min(270px, 82%); } .hospitality-profile { width: min(186px, 56vw); height: 270px; } .hospitality-profile figcaption { right: -5px; } .hospitality-services { grid-template-columns: 1fr; gap: 30px; } }
 </style>
