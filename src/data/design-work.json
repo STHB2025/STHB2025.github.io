@@ -75,5 +75,19 @@
       { "label": "Visit Arno Deep", "href": "https://www.arnodeep.com" },
       { "label": "Arno Deep on LinkedIn", "href": "https://www.linkedin.com/company/arno-deep-pty-ltd" }
     ]
+  },
+  {
+    "projectSlug": "beauty-wellness-template",
+    "discipline": "Website design & development · demo template",
+    "title": "A considered digital home for beauty and wellness",
+    "description": "A demonstration website for a fictional neighbourhood beauty studio, bringing sample treatments, visual storytelling and appointment enquiry paths into one design. The live page clearly marks its business details as examples.",
+    "preview": {
+      "src": "/images/projects/beauty-wellness/demo-preview.svg",
+      "alt": "Illustrative preview of the Beauty & Wellness demonstration website; it is not a screenshot or a real salon identity"
+    },
+    "sample": {
+      "label": "View the live demonstration template",
+      "href": "https://sthb2025.github.io/beauty-wellness-template/"
+    }
   }
 ]

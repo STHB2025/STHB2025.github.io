@@ -161,5 +161,42 @@
       {"label": "Investec Developer Community project directory", "href": "https://github.com/Investec-Developer-Community/Community-Projects", "kind": "resource"}
     ],
     "visual": "payguard"
+  },
+  {
+    "slug": "beauty-wellness-template",
+    "title": "Beauty & Wellness Website Template",
+    "portfolioCategory": "prototypes-experiments",
+    "projectType": "Demonstration website template",
+    "category": "Website Design & Development",
+    "status": "Demonstration Template",
+    "featured": false,
+    "role": "Website design and development",
+    "summary": "A public demonstration website for the fictional neighbourhood beauty studio The Sunday Studio. It presents sample services, a brand story, gallery and enquiry pathways.",
+    "challenge": "Show how a beauty and wellness business could bring its treatments, atmosphere and booking enquiries together in one clear online experience.",
+    "approach": "The template combines an editorial-style welcome, treatment listings, image gallery, studio story, enquiry calls to action and visit information. Its page identifies the studio, prices, testimonials, images and contact details as samples.",
+    "deliverables": [
+      "Beauty and wellness service presentation",
+      "Studio story and visual gallery",
+      "Appointment enquiry pathways",
+      "Visit and opening-hours section"
+    ],
+    "capabilities": ["Website design", "Website development", "Service presentation", "Enquiry journey design"],
+    "evidence": [
+      {"label": "Open the live demonstration template", "href": "https://sthb2025.github.io/beauty-wellness-template/", "kind": "live"}
+    ],
+    "nextOpportunity": "Before adapting this template for a real business, replace all sample business details, prices, imagery, testimonials and contact destinations, and configure the appointment enquiry endpoint.",
+    "visualNote": "The live page identifies itself as a demonstration template, not a real salon. Its business name, location, services, prices, testimonials, images and contact details are samples. The portfolio preview is an illustration of the page structure, not a screenshot.",
+    "cover": {
+      "src": "/images/projects/beauty-wellness/demo-preview.svg",
+      "alt": "Illustrative portfolio preview of The Sunday Studio demonstration website layout, labelled as a template demo"
+    },
+    "images": [
+      {
+        "src": "/images/projects/beauty-wellness/demo-preview.svg",
+        "alt": "Illustrative portfolio preview showing the sample beauty studio website layout, not a screenshot of the live site",
+        "caption": "Illustrative layout preview. The linked live page is a demonstration template with sample business content."
+      }
+    ],
+    "visual": "hub"
   }
 ]

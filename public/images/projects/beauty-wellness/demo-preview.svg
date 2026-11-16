@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Beauty and wellness website demonstration preview</title>
+  <desc id="desc">An illustrative preview of a warm editorial salon website layout. It is not a screenshot of the live demo.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8f2e9"/><stop offset="1" stop-color="#ead6c9"/></linearGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6b4a0"/><stop offset="1" stop-color="#b96e61"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#49382f" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1440" height="1040" fill="#e8e1d7"/>
+  <rect x="74" y="54" width="1292" height="930" rx="14" fill="#fffdf9" filter="url(#shadow)"/>
+  <rect x="74" y="54" width="1292" height="48" rx="14" fill="#f4eee7"/>
+  <circle cx="103" cy="78" r="6" fill="#c77f70"/><circle cx="124" cy="78" r="6" fill="#d9b18f"/><circle cx="145" cy="78" r="6" fill="#a9aa8d"/>
+  <rect x="512" y="66" width="416" height="24" rx="12" fill="#fffdf9"/><text x="720" y="83" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#7d7269">beauty and wellness · illustrative layout</text>
+  <rect x="74" y="102" width="1292" height="34" fill="#473a35"/>
+  <text x="720" y="124" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" letter-spacing="2.4" fill="#fff7ef">DEMONSTRATION TEMPLATE · SAMPLE BUSINESS DETAILS · NOT A REAL SALON</text>
+  <rect x="74" y="136" width="1292" height="72" fill="#fffdf9"/>
+  <text x="126" y="181" font-family="Georgia,serif" font-size="27" fill="#483c37">The Sunday Studio</text>
+  <text x="1105" y="178" font-family="Arial,sans-serif" font-size="12" letter-spacing="1.4" fill="#665b54">SERVICES</text>
+  <text x="1212" y="178" font-family="Arial,sans-serif" font-size="12" letter-spacing="1.4" fill="#665b54">OUR STORY</text>
+  <rect x="74" y="208" width="1292" height="500" fill="url(#paper)"/>
+  <text x="144" y="290" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#8a5c50">YOUR NEIGHBOURHOOD BEAUTY STUDIO</text>
+  <text x="140" y="376" font-family="Georgia,serif" font-size="68" fill="#483b36">Your moment</text>
+  <text x="140" y="452" font-family="Georgia,serif" font-size="68" font-style="italic" fill="#a96356">to feel like you.</text>
+  <text x="146" y="510" font-family="Arial,sans-serif" font-size="18" fill="#645851">Thoughtful beauty rituals, a warm welcome,</text>
+  <text x="146" y="540" font-family="Arial,sans-serif" font-size="18" fill="#645851">and room for the little details.</text>
+  <rect x="146" y="584" width="216" height="50" rx="25" fill="#80564c"/>
+  <text x="254" y="615" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" letter-spacing="1" fill="#fffaf5">ENQUIRE BY EMAIL</text>
+  <rect x="900" y="240" width="370" height="412" rx="184" fill="#d7b6a4"/>
+  <ellipse cx="1082" cy="453" rx="120" ry="155" fill="#f7e8dc"/>
+  <ellipse cx="1032" cy="395" rx="39" ry="73" transform="rotate(-35 1032 395)" fill="url(#petal)"/>
+  <ellipse cx="1126" cy="391" rx="37" ry="70" transform="rotate(34 1126 391)" fill="#d89d89"/>
+  <ellipse cx="1046" cy="487" rx="42" ry="75" transform="rotate(-22 1046 487)" fill="#c88976"/>
+  <ellipse cx="1122" cy="490" rx="40" ry="73" transform="rotate(25 1122 490)" fill="#e1b49f"/>
+  <circle cx="1084" cy="442" r="42" fill="#e9c98f"/>
+  <path d="M1082 478 C1080 530 1082 565 1077 601" fill="none" stroke="#7c8061" stroke-width="9" stroke-linecap="round"/>
+  <path d="M1078 548 C1035 530 1019 510 1009 486 M1080 560 C1121 536 1139 513 1147 484" fill="none" stroke="#8d9270" stroke-width="7" stroke-linecap="round"/>
+  <rect x="74" y="708" width="1292" height="276" fill="#fffdf9"/>
+  <text x="142" y="778" font-family="Arial,sans-serif" font-size="12" letter-spacing="2.6" fill="#986b5d">CONSIDER THIS YOUR TIME</text>
+  <text x="140" y="834" font-family="Georgia,serif" font-size="42" fill="#483b36">A little care goes a long way.</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="140" y="862" width="348" height="82" rx="4" fill="#f7f0e9"/><text x="164" y="895" font-size="11" letter-spacing="1.5" fill="#a16b5e">HANDS · SAMPLE SERVICE</text><text x="164" y="923" font-size="20" fill="#483b36">The signature manicure</text>
+    <rect x="546" y="862" width="348" height="82" rx="4" fill="#f7f0e9"/><text x="570" y="895" font-size="11" letter-spacing="1.5" fill="#a16b5e">HANDS · SAMPLE SERVICE</text><text x="570" y="923" font-size="20" fill="#483b36">BIAB, made beautiful</text>
+    <rect x="952" y="862" width="348" height="82" rx="4" fill="#f7f0e9"/><text x="976" y="895" font-size="11" letter-spacing="1.5" fill="#a16b5e">NAILS · SAMPLE SERVICE</text><text x="976" y="923" font-size="20" fill="#483b36">A soft-gel set</text>
+  </g>
+</svg>
