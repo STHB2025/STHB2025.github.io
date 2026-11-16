@@ -1,12 +1,13 @@
 ---
 const { item, project } = Astro.props;
 const externalLinks = item.links ?? [item.sample];
+import { sitePath } from '../utils/site-path';
 ---
 <article class="design-card">
-  <a class:list={['design-card-image', item.imageFit === 'contain' && 'design-card-image-contained']} href={`/work/${project.slug}/`} aria-label={`Open ${project.title} case study`}>
-    <img src={item.preview.src} alt={item.preview.alt} loading="lazy" decoding="async" />
-    {item.brandMark && <span class="design-card-brand"><img src={item.brandMark.src} alt={item.brandMark.alt} loading="lazy" decoding="async" /></span>}
-    {item.founderPortrait && <span class="design-card-founder"><img src={item.founderPortrait.src} alt={item.founderPortrait.alt} loading="lazy" decoding="async" /></span>}
+  <a class:list={['design-card-image', item.imageFit === 'contain' && 'design-card-image-contained']} href={sitePath(`/work/${project.slug}/`)} aria-label={`Open ${project.title} case study`}>
+    <img src={sitePath(item.preview.src)} alt={item.preview.alt} loading="lazy" decoding="async" />
+    {item.brandMark && <span class="design-card-brand"><img src={sitePath(item.brandMark.src)} alt={item.brandMark.alt} loading="lazy" decoding="async" /></span>}
+    {item.founderPortrait && <span class="design-card-founder"><img src={sitePath(item.founderPortrait.src)} alt={item.founderPortrait.alt} loading="lazy" decoding="async" /></span>}
     <span class="design-card-index">{item.discipline}</span>
   </a>
   <div class="design-card-copy">
@@ -15,7 +16,7 @@ const externalLinks = item.links ?? [item.sample];
     <p class="design-card-description">{item.description}</p>
     <div class="design-card-links">
       {externalLinks.filter(Boolean).map((link) => <a class="text-link" href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <i>↗</i></a>)}
-      <a class="design-case-link" href={`/work/${project.slug}/`}>Project context <span>↗</span></a>
+      <a class="design-case-link" href={sitePath(`/work/${project.slug}/`)}>Project context <span>↗</span></a>
     </div>
   </div>
 </article>
