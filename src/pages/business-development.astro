@@ -2,7 +2,7 @@
 import BaseLayout from '../components/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import projects from '../data/projects.json';
-const business = projects.filter((p) => ['the-wall-fitter', 'arno-deep', 'dazzle-home-services', 'trade-procurement'].includes(p.slug));
+const business = projects.filter((p) => ['the-wall-fitter', 'arno-deep', 'dazzle-home-services', 'trade-procurement', 'trustbridge-africa-korea'].includes(p.slug));
 ---
 <BaseLayout title="Business Development — Jackson" description="Business development through relationships, partnerships and practical execution." active="/business-development/">
   <section class="page-hero business-hero"><div class="page-hero-copy"><span class="eyebrow">BUSINESS DEVELOPMENT · CONNECTING THE PIECES</span><h1>People. Opportunity.<br/><em>Practical execution.</em></h1><p>Jackson’s work connects people, businesses, technology and opportunities, then turns that connection toward a practical solution.</p></div><div class="business-route"><div><b>PROBLEM</b><i>01</i></div><span></span><div><b>PEOPLE</b><i>02</i></div><span></span><div><b>PARTNERSHIP</b><i>03</i></div><span></span><div><b>PRACTICE</b><i>04</i></div></div></section>

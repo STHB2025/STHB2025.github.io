@@ -1,9 +1,9 @@
-export type ProjectStatus = 'Active' | 'Developing Concept' | 'Prototype';
+export type ProjectStatus = 'Active' | 'Developing Concept' | 'Prototype' | 'Demonstration Template' | 'Concept' | 'In Development' | 'Demonstration' | 'Pilot' | 'Live Product';
 
 export type Project = {
   slug: string;
   title: string;
-  portfolioCategory: 'website-development' | 'technology-education' | 'business-development' | 'prototypes-experiments';
+  portfolioCategory: 'website-development' | 'business-ventures' | 'business-development' | 'technology-community-impact' | 'prototypes-experiments';
   category: string;
   projectType?: string;
   status?: ProjectStatus;
