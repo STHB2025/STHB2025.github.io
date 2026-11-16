@@ -2,7 +2,7 @@
   {
     "slug": "senior-tech-hub",
     "title": "Senior Tech Hub",
-    "portfolioCategory": "website-development",
+    "portfolioCategory": "technology-community-impact",
     "projectType": "Personal project",
     "category": "Technology & Community Impact",
     "status": "Active",
@@ -31,7 +31,7 @@
   {
     "slug": "tech-tips-africa",
     "title": "Tech Tips Africa",
-    "portfolioCategory": "technology-education",
+    "portfolioCategory": "technology-community-impact",
     "projectType": "Education programme",
     "category": "Education & Thought Leadership",
     "status": "Active",
@@ -78,7 +78,7 @@
   {
     "slug": "the-wall-fitter",
     "title": "The Wall Fitter",
-    "portfolioCategory": "business-development",
+    "portfolioCategory": "business-ventures",
     "projectType": "Co-founded venture",
     "category": "Business Development & Brand Growth",
     "status": "Active",
@@ -105,7 +105,7 @@
   {
     "slug": "arno-deep",
     "title": "Arno Deep",
-    "portfolioCategory": "business-development",
+    "portfolioCategory": "business-ventures",
     "projectType": "Co-founded venture",
     "category": "Strategy & Brand Growth",
     "status": "Active",
@@ -143,6 +143,23 @@
     "nextOpportunity":"Clarify the concept and potential partners before describing any operational activity."
   },
   {
+    "slug": "trustbridge-africa-korea",
+    "title": "TrustBridge Africa Korea",
+    "portfolioCategory": "business-development",
+    "projectType": "Developing concept",
+    "category": "Business Development & Partnerships",
+    "status": "Developing Concept",
+    "featured": false,
+    "summary": "A developing strategic theme around SME readiness, partnerships and trust. Source materials also identify Africa–Korea partnerships as an area of interest.",
+    "approach": "The source materials outline a readiness framework spanning discovery, informal activity, pilot readiness, partner readiness and scale or export readiness. They do not establish signed partnerships, customers or operational progress.",
+    "deliverables": [],
+    "capabilities": ["Partnership development", "SME readiness framing", "Cross-border opportunity exploration"],
+    "evidence": [],
+    "visualNote": "This entry describes a developing strategic theme only. It does not imply an operating business, signed partnership, customer or active trade programme.",
+    "visual":"trade",
+    "nextOpportunity":"Clarify the project's scope, activities and potential partners before describing operational progress."
+  },
+  {
     "slug": "payguard-prototype",
     "title": "PayGuard Prototype",
     "portfolioCategory": "prototypes-experiments",
@@ -165,7 +182,7 @@
   {
     "slug": "beauty-wellness-template",
     "title": "Beauty & Wellness Website Template",
-    "portfolioCategory": "prototypes-experiments",
+    "portfolioCategory": "website-development",
     "projectType": "Demonstration website template",
     "category": "Website Design & Development",
     "status": "Demonstration Template",
@@ -198,5 +215,30 @@
       }
     ],
     "visual": "hub"
+  },
+  {
+    "slug": "plumbing-home-services-template",
+    "title": "Plumbing & Home Services Website Template",
+    "portfolioCategory": "website-development",
+    "projectType": "Demonstration website template",
+    "category": "Website Design & Development",
+    "status": "Demonstration Template",
+    "featured": false,
+    "role": "Website design and development",
+    "summary": "A responsive Astro template for plumbing and home maintenance businesses, with sample business details identified in its project documentation.",
+    "challenge": "Help a home-services business explain its services, show customers how to make contact and present a clear route for enquiries.",
+    "approach": "The public template includes service listings, emergency contact options, WhatsApp integration and an enquiry form with email fallback when no form endpoint is configured. All sample business details must be replaced before use for a real company.",
+    "deliverables": ["Responsive service website", "Service listings", "Phone, email and WhatsApp contact pathways", "Optional Formspree enquiry integration"],
+    "capabilities": ["Website design", "Website development", "Service presentation", "Contact-flow design"],
+    "evidence": [
+      {"label":"Live demonstration template","href":"https://sthb2025.github.io/Plumbing-Home-Services/","kind":"live"},
+      {"label":"Source repository","href":"https://github.com/STHB2025/Plumbing-Home-Services","kind":"resource"}
+    ],
+    "liveUrl":"https://sthb2025.github.io/Plumbing-Home-Services/",
+    "nextOpportunity":"Replace all fictional business information, photographs and contact destinations. Configure and test a real enquiry endpoint before client launch.",
+    "visualNote":"Demonstration template for the fictional Northline Plumbing Co. The repository README identifies all business profile content, areas, hours, photos and testimonials as samples.",
+    "cover":{"src":"/images/projects/plumbing/template-preview.svg","alt":"Illustrative diagram of a plumbing services website template, not a screenshot of the live website"},
+    "images":[{"src":"/images/projects/plumbing/template-preview.svg","alt":"Illustrative diagram of a plumbing services website template, not a screenshot of the live website","caption":"Illustrative preview of the website structure. The live demonstration uses fictional Northline Plumbing Co. sample content."}],
+    "visual":"plumbing"
   }
 ]

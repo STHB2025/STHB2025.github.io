@@ -4,14 +4,15 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import projects from '../../data/projects.json';
 import { sitePath } from '../../utils/site-path';
 const categoryGroups = [
-  { id: 'website-development', title: 'Website Development', description: 'Website work for a founder-led digital learning initiative and a client service business.' },
-  { id: 'technology-education', title: 'Technology and Education', description: 'Digital learning and practical education work.' },
-  { id: 'business-development', title: 'Business Development', description: 'Ventures and concepts focused on service development, brand growth and partnerships.' },
+  { id: 'website-development', title: 'Website Design & Development', description: 'Client work, personal websites and industry-specific demonstration templates.' },
+  { id: 'business-ventures', title: 'Business Ventures', description: 'Co-founded ventures, clearly distinguished from client work and developing concepts.' },
+  { id: 'business-development', title: 'Business Development', description: 'Business development ideas and concepts at their current stage.' },
   { id: 'prototypes-experiments', title: 'Prototypes and Experiments', description: 'Early-stage concepts and demonstrations, clearly identified by their current status.' },
+  { id: 'technology-community-impact', title: 'Technology & Community Impact', description: 'Digital inclusion, beginner-friendly education and practical community technology.' },
 ];
 ---
 <BaseLayout title="Selected Work — Jackson Portfolio" description="Explore website development, technology and education, business-development, and prototype projects by Jackson in Cape Town, South Africa." active="/work/">
-  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · WEB & BUSINESS PROJECTS</span><h1>Work that<br/><em>connects the dots.</em></h1><p>Browse eight projects by the kind of work they represent. The two website projects lead; other work shows the wider technology, education and business-development practice.</p><div class="work-hero-actions"><a class="button button-dark" href="#website-development">Explore website work <span>↓</span></a><a class="quiet-link" href={sitePath('/design-and-digital/')}>See design samples <span>↗</span></a><a class="quiet-link" href={sitePath('/contact/')}>Discuss an opportunity <span>↗</span></a></div></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
+  <section class="page-hero work-hero"><div class="page-hero-copy"><span class="eyebrow">SELECTED WORK · WEB & BUSINESS PROJECTS</span><h1>Work that<br/><em>connects the dots.</em></h1><p>Browse {projects.length} projects across websites, ventures, business development, prototypes and community technology. Each project appears once, under the area that best describes its current role.</p><div class="work-hero-actions"><a class="button button-dark" href="#website-development">Explore website work <span>↓</span></a><a class="quiet-link" href={sitePath('/design-and-digital/')}>See design samples <span>↗</span></a><a class="quiet-link" href={sitePath('/contact/')}>Discuss an opportunity <span>↗</span></a></div></div><div class="work-index-art"><span>2024—<br/>PRESENT</span><i>PEOPLE<br/>→ IDEAS<br/>→ ACTION</i></div></section>
   <section class="section work-listing" id="selected-work"><div class="work-filters"><span>PROJECT CATEGORIES</span><span>{projects.length} ENTRIES</span><span class="filters-note">Select a category to jump to its projects.</span></div><nav class="work-category-nav" aria-label="Project categories"><ul>{categoryGroups.map((group) => <li><a href={`#${group.id}`}>{group.title}<span aria-hidden="true">↘</span></a></li>)}</ul></nav>
     {categoryGroups.map((group) => {
       const groupProjects = projects.filter((project) => project.portfolioCategory === group.id);
