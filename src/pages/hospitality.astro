@@ -1,21 +1,30 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
-import { experience } from '../data/site';
+import { experience, profile } from '../data/site';
 const hospitalityExperience = experience.filter((job) => job.company !== 'KP Prop');
+const gigEnquiry = `mailto:${profile.email}?subject=${encodeURIComponent('Hospitality and event services enquiry')}&body=${encodeURIComponent('Hi Jackson,\n\nI would like to enquire about your availability for a hospitality shift, private function or event.\n\nEvent or role:\nDate and time:\nLocation:\n\nThank you.')}`;
 ---
-<BaseLayout title="Hospitality — Jackson" description="More than 16 years in hospitality, guest relations and operations." active="/hospitality/">
+<BaseLayout title="Hospitality & Event Services — Jackson" description="More than 16 years in hospitality and operations. Available for part-time opportunities, private functions and events." active="/hospitality/">
   <section class="page-hero hospitality-hero"><div class="page-hero-copy"><span class="eyebrow">HOSPITALITY · THE OPERATIONAL FOUNDATION</span><h1>Service is a<br/><em>way of thinking.</em></h1><p>More than 16 years across hotels, luxury hospitality, restaurants, bars, cafés, concierge, guest relations and operations.</p></div><div class="hospitality-art"><div class="hospitality-profile-mark" aria-hidden="true"><span>PEOPLE</span><i>DETAIL · SERVICE · CARE</i><span>EXPERIENCE</span></div><figure class="hospitality-profile"><img src="/images/jackson/portrait.webp" alt="Portrait of Jackson wearing a navy suit and glasses" loading="eager" decoding="async" /><figcaption>Innocent Jackson</figcaption></figure></div></section>
+  <section class="section hospitality-services" aria-labelledby="hospitality-services-title"><div class="hospitality-services-copy"><span class="eyebrow">HOSPITALITY & EVENT SERVICES</span><h2 id="hospitality-services-title">Experienced service,<br/><em>ready when needed.</em></h2><p>Alongside my business and technology interests, I remain active in hospitality. With hands-on experience in bartending, beverage service, guest relations and front-of-house operations, I am available for part-time opportunities, private functions, corporate events and special occasions.</p><a class="button button-dark" href={gigEnquiry}>Enquire About a Private Gig <span>↗</span></a></div><ul class="hospitality-service-list"><li>Bartending & beverage preparation</li><li>Front-of-house operations</li><li>Guest relations</li><li>Restaurant and bar service</li><li>Event setup and service</li><li>Customer experience and hospitality operations</li></ul></section>
   <section class="hospitality-statement"><span>WHAT THE WORK TAUGHT ME</span><p>Notice the detail.<br/>Stay calm under pressure.<br/><em>Make the experience work.</em></p><a href="/work/senior-tech-hub/" class="text-link">See how that carries forward <i>↗</i></a></section>
   <section class="section experience-section"><div class="section-heading"><div><span class="eyebrow">EXPERIENCE · 2007—2025</span><h2>Built on the<br/><em>real work.</em></h2></div><p>Guest experience, operational discipline and practical problem-solving across service environments.</p></div><div class="timeline">{hospitalityExperience.map((job, i) => <article class="timeline-item"><span class="timeline-number">{String(i + 1).padStart(2, '0')}</span><div><h3>{job.role}</h3><span class="timeline-company">{job.company}</span><p>{job.detail}</p></div><time>{job.dates}</time></article>)}</div></section>
 </BaseLayout>
 
 <style>
-  .hospitality-art { display: flex; align-items: center; justify-content: flex-end; min-width: 0; }
-  .hospitality-profile-mark { position: absolute; inset: 9% 3% 10% 6%; border: 1px solid #c7c8bd; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #627068; transform: rotate(-9deg); }
+  .hospitality-art { display: flex; align-items: center; justify-content: center; min-width: 0; }
+  .hospitality-profile-mark { position: absolute; inset: 12% 12%; border: 1px solid rgba(52, 84, 72, .18); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: rgba(52, 84, 72, .72); transform: rotate(-7deg); }
   .hospitality-profile-mark span { font: 500 clamp(14px, 1.7vw, 22px) var(--display); letter-spacing: .16em; }
   .hospitality-profile-mark i { font: 8px var(--mono); font-style: normal; letter-spacing: .1em; }
-  .hospitality-profile { position: relative; z-index: 1; width: clamp(118px, 15vw, 178px); height: 250px; margin: 0 7% 0 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; overflow: hidden; border: 1px solid rgba(125, 211, 238, .42); border-radius: 50% 50% 18px 18px; background: radial-gradient(ellipse at 50% 72%, rgba(14, 90, 167, .78), #0b2545 65%, #07182e 100%); box-shadow: 0 18px 38px rgba(7, 24, 46, .2); }
+  .hospitality-profile { position: relative; z-index: 1; width: clamp(118px, 15vw, 178px); height: 250px; margin: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; overflow: hidden; border: 1px solid rgba(52, 84, 72, .22); border-radius: 50% 50% 18px 18px; background: radial-gradient(ellipse at 50% 72%, rgba(215, 223, 205, .8), rgba(233, 230, 222, .94) 72%); box-shadow: 0 12px 28px rgba(24, 42, 40, .08); }
   .hospitality-profile img { display: block; width: 100%; height: 218px; object-fit: contain; object-position: center bottom; }
-  .hospitality-profile figcaption { align-self: flex-end; padding: 5px 9px; background: #0e5aa7; color: #fff; font: 8px var(--mono); letter-spacing: .06em; }
-  @media (max-width: 760px) { .hospitality-profile-mark { inset: 3% 4% 8% 4%; } .hospitality-profile { margin-right: 8%; } }
+  .hospitality-profile figcaption { align-self: flex-end; padding: 5px 9px; background: var(--green); color: #fff; font: 8px var(--mono); letter-spacing: .06em; }
+  .hospitality-services { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(32px, 7vw, 96px); background: #f4f1eb; }
+  .hospitality-services h2 { margin: 18px 0 20px; font: 500 clamp(34px, 4vw, 54px)/1.08 var(--display); letter-spacing: -.065em; }
+  .hospitality-services h2 em { font-family: Georgia, serif; font-weight: 400; }
+  .hospitality-services-copy > p { max-width: 680px; color: #55635b; font-size: 15px; }
+  .hospitality-services .button { margin-top: 15px; }
+  .hospitality-service-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .hospitality-service-list li { padding: 13px 0; border-bottom: 1px solid var(--line); color: #48534e; font-size: 13px; }
+  @media (max-width: 760px) { .hospitality-profile-mark { inset: 12% 8%; } .hospitality-services { grid-template-columns: 1fr; gap: 30px; } }
 </style>

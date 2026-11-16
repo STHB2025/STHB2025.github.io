@@ -2,9 +2,12 @@
 import BaseLayout from '../../components/BaseLayout.astro';
 import ProjectArtwork from '../../components/ProjectArtwork.astro';
 import projects from '../../data/projects.json';
+import { profile } from '../../data/site';
 export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
 const { project } = Astro.props;
 const logoOnly = project.images?.length === 1 && project.brandLogo?.src === project.images[0].src;
+const contactProject = ['arno-deep', 'the-wall-fitter'].includes(project.slug);
+const projectContact = `mailto:${profile.email}?subject=${encodeURIComponent(`${project.title} enquiry`)}`;
 ---
 <BaseLayout title={`${project.title} — Case study | Jackson`} description={project.summary} active="/work/">
   <article class="case-study">
@@ -27,6 +30,7 @@ const logoOnly = project.images?.length === 1 && project.brandLogo?.src === proj
       <section id="work" class="case-section"><span class="eyebrow">03 / WORK & CAPABILITIES</span><h2>In practice</h2>{project.deliverables.length > 0 && <ul class="deliverable-list">{project.deliverables.map((item, i) => <li><span>0{i + 1}</span>{item}</li>)}</ul>}{project.capabilities.length > 0 && <div class="capability-row">{project.capabilities.map((item) => <span>{item}</span>)}</div>}</section>
       {(project.evidence.length > 0 || project.nextOpportunity) && <section id="evidence" class="case-section"><span class="eyebrow">04 / EVIDENCE</span><h2>What you can explore</h2>{project.evidence.length > 0 && <ul class="evidence-list">{project.evidence.map((item) => <li><a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}<span>↗</span></a></li>)}</ul>}{project.nextOpportunity && <p class="next-note"><b>NEXT STEP</b>{project.nextOpportunity}</p>}</section>}
       {project.liveUrl && <a class="button button-dark case-cta" href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit the live project <span>↗</span></a>}
+      {contactProject && <a class="button button-dark case-cta" href={projectContact}>Contact Me <span>↗</span></a>}
     </div></div><nav class="case-next"><a href="/work/">Explore more work <span>↗</span></a><a href="/contact/">Start a conversation <span>↗</span></a></nav>
   </article>
 </BaseLayout>
