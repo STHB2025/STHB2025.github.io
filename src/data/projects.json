@@ -21,6 +21,9 @@
     "liveUrl":"https://sthb2025.github.io/senior-tech-hub-site/",
     "nextOpportunity":"Develop the resource library and community workshop model.",
     "cover": {"src":"/images/projects/senior-tech-hub/digital-confidence.webp","alt":"Senior Tech Hub awareness graphic about practical technology support for seniors"},
+    "coverFit": "contain",
+    "galleryFit": "contain",
+    "brandLogoPlacement": "below",
     "brandLogo": {"src":"/images/projects/senior-tech-hub/logo.webp","alt":"Senior Tech Hub logo"},
     "images": [
       {"src":"/images/projects/senior-tech-hub/logo.webp","alt":"Senior Tech Hub logo","caption":"Senior Tech Hub visual identity."},
@@ -44,6 +47,9 @@
     "capabilities": ["Educational content", "Digital safety communication", "Newsletter development", "Human-centred technology education"],
     "evidence": [],
     "cover": {"src":"/images/projects/tech-tips-africa/scam-messages.webp","alt":"Tech Tips Africa educational graphic about recognizing scam messages"},
+    "coverFit": "contain",
+    "galleryFit": "contain",
+    "brandLogoPlacement": "below",
     "brandLogo": {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo"},
     "images": [
       {"src":"/images/projects/tech-tips-africa/logo.webp","alt":"Tech Tips Africa logo","caption":"Tech Tips Africa visual identity, connected to Senior Tech Hub."},
@@ -62,6 +68,7 @@
     "category": "Business Positioning & Digital Presence",
     "featured": true,
     "brandLogo": {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo"},
+    "previewLabel": "Illustrative project preview · not a website screenshot",
     "summary": "Customer-facing service presentation and WhatsApp-first marketing for practical family and home support services.",
     "challenge": "Present a mix of home and family support services clearly across customer-facing materials and a digital presence.",
     "approach": "Project materials focus on clear service messages, family support and direct customer communication across digital and promotional formats.",
@@ -93,6 +100,9 @@
     "capabilities": ["Business development", "Client relationships", "Partnerships", "Service expansion", "Brand growth"],
     "evidence": [],
     "cover": {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Custom illustrated wall covering installed in a room"},
+    "coverFit": "contain",
+    "galleryFit": "contain",
+    "brandLogoPlacement": "below",
     "brandLogo": {"src":"/images/projects/the-wall-fitter/logo.png","alt":"The Wall Fitter logo"},
     "images": [
       {"src":"/images/projects/the-wall-fitter/custom-wallpaper.jpg","alt":"Promotional image showing a custom illustrated wallpaper installation associated with The Wall Fitter","caption":"Promotional artwork supplied with The Wall Fitter materials."},
@@ -120,6 +130,7 @@
     "deliverables": ["Strategy and brand development", "Digital presence", "Business-facing promotional materials"],
     "capabilities": ["Business strategy", "Brand development", "Client relationships", "Partnership development", "Commercial storytelling"],
     "evidence": [],
+    "galleryFit": "contain",
     "images": [
       {"src":"/images/projects/arno-deep/logo.jpg","alt":"Arno Deep wordmark and brand emblem on a light textured background","caption":"Arno Deep brand mark supplied with the project materials."}
     ],
@@ -203,6 +214,9 @@
     ],
     "nextOpportunity": "Before adapting this template for a real business, replace all sample business details, prices, imagery, testimonials and contact destinations, and configure the appointment enquiry endpoint.",
     "visualNote": "The live page identifies itself as a demonstration template, not a real salon. Its business name, location, services, prices, testimonials, images and contact details are samples. The portfolio preview is an illustration of the page structure, not a screenshot.",
+    "coverFit": "contain",
+    "galleryFit": "contain",
+    "previewLabel": "Illustrative preview · not a website screenshot",
     "cover": {
       "src": "/images/projects/beauty-wellness/demo-preview.svg",
       "alt": "Illustrative portfolio preview of The Sunday Studio demonstration website layout, labelled as a template demo"
@@ -237,6 +251,9 @@
     "liveUrl":"https://sthb2025.github.io/Plumbing-Home-Services/",
     "nextOpportunity":"Replace all fictional business information, photographs and contact destinations. Configure and test a real enquiry endpoint before client launch.",
     "visualNote":"Demonstration template for the fictional Northline Plumbing Co. The repository README identifies all business profile content, areas, hours, photos and testimonials as samples.",
+    "coverFit":"contain",
+    "galleryFit":"contain",
+    "previewLabel":"Illustrative preview · not a website screenshot",
     "cover":{"src":"/images/projects/plumbing/template-preview.svg","alt":"Illustrative diagram of a plumbing services website template, not a screenshot of the live website"},
     "images":[{"src":"/images/projects/plumbing/template-preview.svg","alt":"Illustrative diagram of a plumbing services website template, not a screenshot of the live website","caption":"Illustrative preview of the website structure. The live demonstration uses fictional Northline Plumbing Co. sample content."}],
     "visual":"plumbing"

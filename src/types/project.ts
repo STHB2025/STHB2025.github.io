@@ -22,5 +22,10 @@ export type Project = {
   liveUrl?: string;
   nextOpportunity?: string;
   brandLogo?: { src: string; alt: string };
+  coverFit?: 'cover' | 'contain';
+  coverPosition?: string;
+  galleryFit?: 'cover' | 'contain';
+  brandLogoPlacement?: 'overlay' | 'below';
+  previewLabel?: string;
   visual: 'hub' | 'tips' | 'dazzle' | 'wall' | 'arno' | 'trade' | 'tech' | 'payguard';
 };
