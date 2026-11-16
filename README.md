@@ -1,6 +1,6 @@
 # Jackson Professional Portfolio
 
-Astro static portfolio built from the Jackson Portfolio Source Pack. Project content is maintained in `src/data/projects.json`; profile and experience content lives in `src/data/site.ts`.
+Astro static portfolio built from the Jackson Portfolio Source Pack. Project content and project-type labels are maintained in `src/data/projects.json`; profile, experience, web services and development steps live in `src/data/site.ts`.
 
 ## Local development
 
@@ -10,4 +10,4 @@ Astro static portfolio built from the Jackson Portfolio Source Pack. Project con
 
 Canonical metadata, social image URLs, `robots.txt`, and the sitemap use the GitHub Pages origin configured in `astro.config.mjs` unless `PUBLIC_SITE_URL` overrides it.
 
-Project cards use supplied brand marks where available. Other visual elements are CSS-rendered diagrams or campaign artwork described in the relevant project data. The Open Graph preview is a PNG rendered from the included SVG source artwork.
+Project cards use supplied brand marks and imagery where available. Other visual elements are CSS-rendered previews or campaign artwork described in the relevant project data. The Dazzle case-study visual is an illustration, not a screenshot of its live site. The Open Graph preview is a PNG rendered from the included SVG source artwork.

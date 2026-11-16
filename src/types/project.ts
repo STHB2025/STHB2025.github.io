@@ -4,6 +4,7 @@ export type Project = {
   slug: string;
   title: string;
   category: string;
+  projectType?: string;
   status?: ProjectStatus;
   featured: boolean;
   role?: string;

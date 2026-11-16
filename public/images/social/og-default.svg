@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f4f1eb"/><circle cx="1010" cy="80" r="300" fill="#dfe5d8"/><circle cx="1020" cy="80" r="210" fill="none" stroke="#a4b6a3"/><text x="90" y="100" font-family="Arial,sans-serif" font-size="22" letter-spacing="4" fill="#68716b">INNOCENT JACKSON · CAPE TOWN</text><text x="85" y="290" font-family="Arial,sans-serif" font-size="79" font-weight="600" letter-spacing="-5" fill="#182a28">Building businesses,</text><text x="85" y="385" font-family="Georgia,serif" font-style="italic" font-size="79" fill="#345448">connecting technology,</text><text x="85" y="480" font-family="Arial,sans-serif" font-size="79" font-weight="600" letter-spacing="-5" fill="#182a28">and creating practical impact.</text><text x="90" y="565" font-family="Arial,sans-serif" font-size="19" letter-spacing="3" fill="#68716b">BUSINESS DEVELOPMENT · TECHNOLOGY · HOSPITALITY</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f1eb"/>
+  <circle cx="1080" cy="80" r="320" fill="#dfe5d8"/>
+  <circle cx="1080" cy="80" r="225" fill="none" stroke="#a4b6a3"/>
+  <text x="82" y="88" font-family="Arial,sans-serif" font-size="20" letter-spacing="4" fill="#68716b">JACKSON · CAPE TOWN, SOUTH AFRICA</text>
+  <text x="76" y="235" font-family="Arial,sans-serif" font-size="68" font-weight="600" letter-spacing="-3" fill="#182a28">Building digital experiences</text>
+  <text x="76" y="320" font-family="Georgia,serif" font-style="italic" font-size="68" fill="#345448">that help businesses grow.</text>
+  <text x="82" y="402" font-family="Arial,sans-serif" font-size="19" letter-spacing="3" fill="#68716b">AFFORDABLE, PROFESSIONAL WEBSITE DESIGN &amp; DEVELOPMENT</text>
+  <g transform="translate(770 455)">
+    <rect x="0" y="0" width="345" height="112" rx="3" fill="#182a28"/>
+    <rect x="0" y="0" width="345" height="19" fill="#345448"/>
+    <circle cx="15" cy="10" r="3" fill="#d76b47"/><circle cx="27" cy="10" r="3" fill="#d6dfbb"/><circle cx="39" cy="10" r="3" fill="#f4f1eb"/>
+    <rect x="25" y="39" width="118" height="8" fill="#f4f1eb"/><rect x="25" y="56" width="178" height="5" fill="#aebbb0"/>
+    <rect x="25" y="78" width="86" height="20" rx="2" fill="#d76b47"/>
+    <rect x="224" y="39" width="92" height="59" fill="#d6dfbb"/>
+  </g>
+  <text x="82" y="550" font-family="Arial,sans-serif" font-size="18" letter-spacing="3" fill="#68716b">SMALL BUSINESSES · STARTUPS · SOUTH AFRICA</text>
+</svg>

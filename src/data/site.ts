@@ -2,21 +2,41 @@ export const profile = {
   name: 'Jackson',
   fullName: 'Innocent Jackson',
   location: 'Cape Town, South Africa',
-  headline: 'Building businesses, connecting technology, and creating practical impact.',
-  positioning: 'Business Development • Technology • Hospitality • Entrepreneurship',
-  bio: 'A Cape Town based business development and hospitality professional working at the intersection of entrepreneurship, technology, customer experience and community impact.',
+  headline: 'I help South African small businesses and startups build a professional online presence with modern, responsive websites.',
+  positioning: 'Independent Web Developer · Cape Town, South Africa',
+  bio: 'I am an emerging independent web developer based in Cape Town, South Africa. My background in hospitality and business development shapes how I approach websites: start with the people, understand the business, and make the next step clear.',
   email: 'innoemailbox@gmail.com',
+  whatsapp: '+27 81 338 4873',
   linkedin: 'https://www.linkedin.com/in/innocent-jackson',
 };
 
 export const navigation = [
   { label: 'About', href: '/about/' },
+  { label: 'Web services', href: '/#web-services' },
   { label: 'Work', href: '/work/' },
   { label: 'Hospitality', href: '/hospitality/' },
   { label: 'Technology', href: '/technology/' },
   { label: 'Business development', href: '/business-development/' },
   { label: 'Thought leadership', href: '/thought-leadership/' },
   { label: 'Resources', href: '/resources/' },
+];
+
+export const webServices = [
+  { number: '01', title: 'Business landing pages', description: 'A focused page that explains what you offer and how to take the next step.' },
+  { number: '02', title: 'Small business websites', description: 'A clear online home for your services, business details and customer enquiries.' },
+  { number: '03', title: 'Responsive website design', description: 'Layouts made to work across phones, tablets and desktop screens.' },
+  { number: '04', title: 'Website redesigns', description: 'A considered refresh for a website that no longer represents your business.' },
+  { number: '05', title: 'WhatsApp integration', description: 'A direct way for visitors to start a customer conversation.' },
+  { number: '06', title: 'Basic SEO setup', description: 'Clear page titles, descriptions and structure to help search engines understand your site.' },
+  { number: '07', title: 'Website maintenance', description: 'Updates and practical support to keep your website current.' },
+];
+
+export const webDevelopmentSteps = [
+  { number: '01', title: 'Understand the business', description: 'Clarify your services, customers and what the website needs to help them do.' },
+  { number: '02', title: 'Plan the pages', description: 'Organise the information and agree on the important content before building.' },
+  { number: '03', title: 'Design and develop', description: 'Create a clear, responsive website around your goals and approved material.' },
+  { number: '04', title: 'Test and refine', description: 'Review the pages, links and phone layout, then make the agreed improvements.' },
+  { number: '05', title: 'Launch and support', description: 'Prepare the site for launch and discuss any updates or ongoing support.' },
 ];
 
 export const experience = [

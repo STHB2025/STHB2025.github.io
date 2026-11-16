@@ -13,12 +13,13 @@ const logoOnly = project.images?.length === 1 && project.brandLogo?.src === proj
       <div class="case-heading" class:list={{ 'case-heading-single': !(project.role || project.period || project.location) }}>
         <div>{project.status && <span class="status">{project.status}</span>}<h1>{project.title}</h1><p>{project.summary}</p></div>
         {(project.role || project.period || project.location) && <div class="case-meta">
-          {project.role && <><span>ROLE</span><b>{project.role}</b></>}
+          {project.projectType && <><span>PROJECT TYPE</span><b>{project.projectType}</b></>}
+          {project.role && <><span>MY ROLE</span><b>{project.role}</b></>}
           {project.period && <><span>PERIOD</span><b>{project.period}</b></>}
           {project.location && <><span>LOCATION</span><b>{project.location}</b></>}
         </div>}
       </div>
-      {logoOnly ? <div class="brand-case-hero"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
+      {logoOnly && project.slug === 'dazzle-home-services' ? <figure class="dazzle-preview"><div class="case-art"><ProjectArtwork kind={project.visual} /><span class="dazzle-preview-logo"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /></span></div><figcaption>Illustrative project preview using the supplied brand mark and service themes. This is not a screenshot of the live website.</figcaption></figure> : logoOnly ? <div class="brand-case-hero"><img src={project.brandLogo.src} alt={project.brandLogo.alt} /><span>{project.category}</span></div> : project.images?.length ? <div class="case-gallery" aria-label={`${project.title} project images`}>{project.images.map((image) => <figure><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /><figcaption>{image.caption}</figcaption></figure>)}</div> : <div class="case-art"><ProjectArtwork kind={project.visual} /></div>}
     </header>
     <div class="case-content"><aside class="case-aside"><span class="eyebrow">IN THIS PROJECT</span>{project.challenge && <a href="#context">Context</a>}{project.approach && <a href="#approach">Approach</a>}<a href="#work">Work & capabilities</a>{(project.evidence.length > 0 || project.nextOpportunity) && <a href="#evidence">Evidence</a>}</aside><div class="case-main">
       {project.challenge && <section id="context" class="case-section"><span class="eyebrow">01 / CONTEXT</span><h2>The situation</h2><p>{project.challenge}</p></section>}
@@ -39,5 +40,11 @@ const logoOnly = project.images?.length === 1 && project.brandLogo?.src === proj
   .brand-case-hero { min-height: clamp(270px, 40vw, 440px); margin-top: 1.5rem; padding: clamp(2rem, 8vw, 6rem); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; background: radial-gradient(ellipse at 50% 48%, #fff 0, #f6f4ef 55%, #e9e5dd 100%); }
   .brand-case-hero img { display: block; width: min(70%, 380px); height: clamp(130px, 21vw, 230px); object-fit: contain; }
   .brand-case-hero span { color: #59665f; font: 9px var(--mono); letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+  .dazzle-preview { margin: 1.5rem 0 0; }
+  .dazzle-preview .case-art { position: relative; margin: 0; }
+  .dazzle-preview-logo { position: absolute; top: 18px; right: 18px; display: grid; place-items: center; width: clamp(100px, 14vw, 156px); height: clamp(80px, 11vw, 120px); padding: 8px; background: rgba(255,255,255,.96); box-shadow: 0 8px 25px rgba(24,42,40,.14); }
+  .dazzle-preview-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .dazzle-preview > figcaption { max-width: 690px; margin: .75rem 0 0 auto; color: #59665f; text-align: right; font-size: .8rem; line-height: 1.5; }
   @media (max-width: 640px) { .case-gallery { grid-template-columns: 1fr; } .brand-case-hero { min-height: 250px; } .brand-case-hero img { width: 80%; height: 150px; } }
+  @media (max-width: 640px) { .dazzle-preview > figcaption { text-align: left; } .dazzle-preview-logo { top: 12px; right: 12px; width: 96px; height: 76px; } }
 </style>

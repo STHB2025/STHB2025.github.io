@@ -1,7 +1,14 @@
 ---
 import BaseLayout from '../components/BaseLayout.astro';
 import { profile } from '../data/site';
+const websiteEnquiry = `mailto:${profile.email}?subject=${encodeURIComponent('Website project enquiry')}&body=${encodeURIComponent('Hi Jackson,\n\nI am interested in a website for my business.\n\nBusiness name:\nWhat the business does:\nWhat I need the website to help with:\n\nThank you.')}`;
+const whatsappEnquiry = `https://wa.me/${profile.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hi Jackson, I am interested in a website for my business.')}`;
 ---
-<BaseLayout title="Contact Jackson" description="Contact Jackson about business development, technology, hospitality and partnership opportunities." active="/contact/">
-  <section class="contact-page"><div class="contact-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> CONTACT · CAPE TOWN, SOUTH AFRICA</span><h1>Let’s start<br/><em>with a conversation.</em></h1><p>For business development, partnerships, digital inclusion, hospitality and practical technology opportunities.</p><a class="button button-dark" href={`mailto:${profile.email}`}>Email Jackson <span>↗</span></a></div><div class="contact-details"><span class="eyebrow">DIRECT DETAILS</span><a href={`mailto:${profile.email}`}><small>PROFESSIONAL EMAIL</small>{profile.email}<i>↗</i></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><small>LINKEDIN</small>Innocent Jackson<i>↗</i></a></div><div class="contact-side-note">GOOD WORK<br/>STARTS WITH<br/>GOOD QUESTIONS.</div></section>
+<BaseLayout title="Request a Website Quote — Jackson, Cape Town" description="Tell Jackson about your website project. Contact the independent web developer by email, WhatsApp or LinkedIn." active="/contact/">
+  <section class="contact-page"><div class="contact-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> WEBSITE ENQUIRIES · CAPE TOWN, SOUTH AFRICA</span><h1>Let’s build<br/><em>your online presence.</em></h1><p>Need a website for your business? Tell me what you do, who you serve and what you want your website to help with. I’ll reply so we can discuss a suitable next step.</p><a class="button button-dark" href={websiteEnquiry}>Request a website quote <span>↗</span></a><p class="contact-note">The email button opens a draft in your email app. No enquiry form is connected on this site.</p></div><div class="contact-details"><span class="eyebrow">CHOOSE HOW TO GET IN TOUCH</span><a href={websiteEnquiry}><small>EMAIL</small>{profile.email}<i>↗</i></a><a href={whatsappEnquiry} target="_blank" rel="noopener noreferrer"><small>WHATSAPP · PROFESSIONAL MOBILE</small>{profile.whatsapp}<i>↗</i></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><small>LINKEDIN</small>Innocent Jackson<i>↗</i></a></div><div class="contact-side-note">GOOD WORK<br/>STARTS WITH<br/>GOOD QUESTIONS.</div></section>
 </BaseLayout>
+
+<style>
+  .contact-note { max-width: 400px; margin-top: 16px; color: #68716b; font-size: 11px; }
+  .contact-details > a { line-height: 1.6; }
+</style>

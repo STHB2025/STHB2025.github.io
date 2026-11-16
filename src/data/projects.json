@@ -2,10 +2,11 @@
   {
     "slug": "senior-tech-hub",
     "title": "Senior Tech Hub",
+    "projectType": "Personal project",
     "category": "Technology & Community Impact",
     "status": "Active",
     "featured": true,
-    "role": "Founder and Digital Empowerment Advocate",
+    "role": "Founder; website planning and development",
     "period": "Established June 2024",
     "location": "Cape Town, South Africa",
     "summary": "A founder-led initiative helping seniors, families and first-time technology users build confidence with everyday digital tools.",
@@ -27,6 +28,7 @@
   {
     "slug": "tech-tips-africa",
     "title": "Tech Tips Africa",
+    "projectType": "Education programme",
     "category": "Education & Thought Leadership",
     "status": "Active",
     "featured": true,
@@ -50,6 +52,8 @@
   {
     "slug": "dazzle-home-services",
     "title": "Dazzle Home Services",
+    "projectType": "Client business project",
+    "role": "Website design and development",
     "category": "Business Positioning & Digital Presence",
     "featured": true,
     "brandLogo": {"src":"/images/projects/dazzle-home-services/logo.webp","alt":"Dazzle Home Services logo"},
@@ -68,6 +72,7 @@
   {
     "slug": "the-wall-fitter",
     "title": "The Wall Fitter",
+    "projectType": "Co-founded venture",
     "category": "Business Development & Brand Growth",
     "status": "Active",
     "featured": true,
@@ -93,6 +98,7 @@
   {
     "slug": "arno-deep",
     "title": "Arno Deep",
+    "projectType": "Co-founded venture",
     "category": "Strategy & Brand Growth",
     "status": "Active",
     "featured": true,
@@ -114,6 +120,7 @@
   {
     "slug": "trade-procurement",
     "title": "South Africa–West Africa Trade & Procurement",
+    "projectType": "Developing concept",
     "category": "Business Development",
     "status": "Developing Concept",
     "featured": false,
@@ -129,6 +136,7 @@
   {
     "slug": "payguard-prototype",
     "title": "PayGuard Prototype",
+    "projectType": "Prototype",
     "category": "Prototype & Community Technology",
     "status": "Prototype",
     "featured": false,

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import projects from '../data/projects.json';
 
 const routes = [
-  '/', '/about/', '/work/', '/hospitality/', '/technology/',
+  '/', '/about/', '/work/', '/design-and-digital/', '/hospitality/', '/technology/',
   '/business-development/', '/thought-leadership/', '/resources/', '/contact/',
   ...projects.map((project) => `/work/${project.slug}/`),
 ];
